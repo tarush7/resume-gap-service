@@ -1,0 +1,3331 @@
+{
+  "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+  "prompt_version": "job_requirements_langextract_v6_1",
+  "selection": "succeeded_with_warnings and requirements_rejected > 10",
+  "exported_at_utc": "2026-09-22T05:00:02.775223+00:00",
+  "job_count": 8,
+  "jobs": [
+    {
+      "id": "9d88c4b2-83c5-4a84-a158-b72470d76792",
+      "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+      "job_id": "3c99f3df-e8c4-43b2-90a1-acae5fdb1f0d",
+      "job_title": "Staff Technical Program Manager",
+      "company": "Kaseya",
+      "source": "linkedin",
+      "description_length": 4878,
+      "extractor": "langextract",
+      "prompt_version": "job_requirements_langextract_v6_1",
+      "model_name": "qwen3.5:9b",
+      "save_requirements": false,
+      "status": "succeeded_with_warnings",
+      "started_at": "2026-09-21T12:14:30.502094+00:00",
+      "completed_at": "2026-09-21T12:17:17.032535+00:00",
+      "duration_ms": 166435,
+      "requirements_extracted": 42,
+      "requirements_rejected": 43,
+      "requirements_saved": null,
+      "extracted_requirements": [
+        {
+          "name": "Lead cross-platform technical programs",
+          "category": "responsibility",
+          "evidence": "lead high-impact, cross-platform technical programs",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Manage programs spanning multiple SaaS products",
+          "category": "responsibility",
+          "evidence": "span multiple SaaS products",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Act as force multiplier for engineering and product leadership",
+          "category": "responsibility",
+          "evidence": "operate as a force multiplier for engineering and product leadership",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Strong technical depth",
+          "category": "required_skill",
+          "evidence": "requires strong technical depth",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Own and drive end-to-end execution of large, cross-functional technical programs",
+          "category": "responsibility",
+          "evidence": "Own and drive end-to-end execution of large, cross-functional technical programs",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Translate company-level priorities into clear program plans",
+          "category": "responsibility",
+          "evidence": "Translate company-level priorities into clear program plans",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Define program milestones",
+          "category": "responsibility",
+          "evidence": "Translate company-level priorities into clear program plans, milestones",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Manage program scope",
+          "category": "responsibility",
+          "evidence": "Actively manage scope",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Manage program risks",
+          "category": "responsibility",
+          "evidence": "Actively manage scope, risks",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Ensure high quality delivery",
+          "category": "responsibility",
+          "evidence": "Ensure programs are delivered with high quality",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Adapt delivery standards for MSP and enterprise customers",
+          "category": "responsibility",
+          "evidence": "appropriate for MSP and enterprise customers",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Partner with engineering leaders",
+          "category": "responsibility",
+          "evidence": "Partner closely with engineering leaders",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Understand system design",
+          "category": "responsibility",
+          "evidence": "understand system design",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Drive alignment on architecture decisions",
+          "category": "responsibility",
+          "evidence": "Drive alignment on architecture decisions",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Manage integration across acquired products",
+          "category": "responsibility",
+          "evidence": "especially across acquired products",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Develop technical fluency across Kaseya's SaaS platforms",
+          "category": "responsibility",
+          "evidence": "Develop technical fluency across Kaseya's SaaS platforms",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Own program health",
+          "category": "responsibility",
+          "evidence": "Serve as the single-threaded owner for program health",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Produce executive-level updates",
+          "category": "responsibility",
+          "evidence": "Produce crisp executive-level updates",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Highlight program progress",
+          "category": "responsibility",
+          "evidence": "highlight progress",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Facilitate decision-making across organizations",
+          "category": "responsibility",
+          "evidence": "Facilitate decision-making across organizations with competing priorities and limited resources",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Establish scalable program management frameworks",
+          "category": "responsibility",
+          "evidence": "Establish scalable program management frameworks, operating rhythms, and tooling to support Kaseya's growth",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Identify systemic execution gaps",
+          "category": "responsibility",
+          "evidence": "Identify systemic execution gaps and drive improvements in planning, dependency management, and delivery predictability",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Mentor and influence other TPMs",
+          "category": "responsibility",
+          "evidence": "Mentor and influence other TPMs, helping raise the bar for technical program management across the organization",
+          "requirement_level": "required"
+        },
+        {
+          "name": "10+ years of experience in Technical Program Management",
+          "category": "experience",
+          "evidence": "10+ years of experience in Technical Program Management, Engineering Program Management, or equivalent roles in SaaS or cloud-based software environments",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Architecture knowledge",
+          "category": "required_skill",
+          "evidence": "Strong technical foundation with the ability to engage deeply in architecture, APIs, data, and cloud-native systems",
+          "requirement_level": "required"
+        },
+        {
+          "name": "APIs",
+          "category": "responsibility",
+          "evidence": "APIs",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Data knowledge",
+          "category": "responsibility",
+          "evidence": "data",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Cloud-native systems",
+          "category": "required_skill",
+          "evidence": "cloud-native systems",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Leading multi-team, multi-product programs",
+          "category": "experience",
+          "evidence": "Proven experience leading multi-team, multi-product programs with significant technical and organizational complexity",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Written and verbal communication skills",
+          "category": "required_skill",
+          "evidence": "Exceptional written and verbal communication skills, including experience presenting to senior leadership",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Presenting to senior leadership",
+          "category": "experience",
+          "evidence": "experience presenting to senior leadership",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Influence without authority",
+          "category": "required_skill",
+          "evidence": "Demonstrated ability to influence without authority in a fast-paced, matrixed organization",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Experience working on platform integration",
+          "category": "experience",
+          "evidence": "Experience working on platform integration, M&A integration, or large-scale SaaS modernization initiatives",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Experience working on M&A integration",
+          "category": "experience",
+          "evidence": "Experience working on platform integration, M&A integration",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Familiarity with cloud platforms",
+          "category": "preferred_skill",
+          "evidence": "Familiarity with cloud platforms (AWS preferred), distributed systems, and enterprise-grade security requirements",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "AWS",
+          "category": "preferred_skill",
+          "evidence": "AWS",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Distributed systems",
+          "category": "preferred_skill",
+          "evidence": "distributed systems",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Enterprise-grade security requirements",
+          "category": "preferred_skill",
+          "evidence": "enterprise-grade security requirements",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Experience supporting B2B products",
+          "category": "experience",
+          "evidence": "Experience supporting B2B, IT management, security, or MSP-focused products",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Agile and hybrid delivery models",
+          "category": "preferred_skill",
+          "evidence": "Strong working knowledge of Agile and hybrid delivery models",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Prior experience mentoring TPMs",
+          "category": "experience",
+          "evidence": "Prior experience mentoring TPMs or acting as a program leader across multiple initiatives",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Acting as a program leader across multiple initiatives",
+          "category": "experience",
+          "evidence": "acting as a program leader across multiple initiatives",
+          "requirement_level": "preferred"
+        }
+      ],
+      "extraction_warnings": [
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: span engineering organizations",
+          "model_evidence": "span engineering organizations",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: span business functions",
+          "model_evidence": "span business functions",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: drive execution rigor",
+          "model_evidence": "drive execution rigor",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: manage dependencies",
+          "model_evidence": "manage dependencies",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: ensure delivery predictability",
+          "model_evidence": "ensure delivery predictability",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: drive complex initiatives such as platform integrations",
+          "model_evidence": "drive complex initiatives such as platform integrations",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: drive complex initiatives such as modernization efforts",
+          "model_evidence": "drive complex initiatives such as modernization efforts",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: drive complex initiatives such as reliability improvements",
+          "model_evidence": "drive complex initiatives such as reliability improvements",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: drive complex initiatives such as enterprise-scale launches",
+          "model_evidence": "drive complex initiatives such as enterprise-scale launches",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: require systems thinking",
+          "model_evidence": "require systems thinking",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: require executive communication",
+          "model_evidence": "require executive communication",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: require ability to influence across a highly matrixed organization",
+          "model_evidence": "require ability to influence across a highly matrixed organization",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: impact multiple Kaseya products",
+          "model_evidence": "impact multiple Kaseya products",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: impact multiple Kaseya platforms",
+          "model_evidence": "impact multiple Kaseya platforms",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Translate company-level priorities into success metrics",
+          "model_evidence": "Translate company-level priorities into success metrics",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Translate company-level priorities into delivery commitments",
+          "model_evidence": "Translate company-level priorities into delivery commitments",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Actively manage dependencies",
+          "model_evidence": "Actively manage dependencies",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Actively manage tradeoffs",
+          "model_evidence": "Actively manage tradeoffs",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: across engineering teams",
+          "model_evidence": "across engineering teams",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: across product teams",
+          "model_evidence": "across product teams",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: across security teams",
+          "model_evidence": "across security teams",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: across infrastructure teams",
+          "model_evidence": "across infrastructure teams",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: across operations teams",
+          "model_evidence": "across operations teams",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ensure programs are delivered with security standards",
+          "model_evidence": "Ensure programs are delivered with security standards",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ensure programs are delivered with reliability standards",
+          "model_evidence": "Ensure programs are delivered with reliability standards",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Partner closely with architects",
+          "model_evidence": "Partner closely with architects",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: understand platform constraints",
+          "model_evidence": "understand platform constraints",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: understand technical risks",
+          "model_evidence": "understand technical risks",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Drive alignment on sequencing",
+          "model_evidence": "Drive alignment on sequencing",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Drive alignment on integration strategies",
+          "model_evidence": "Drive alignment on integration strategies",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Develop technical fluency across APIs",
+          "model_evidence": "Develop technical fluency across APIs",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Develop technical fluency across data flows",
+          "model_evidence": "Develop technical fluency across data flows",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Develop technical fluency across cloud infrastructure",
+          "model_evidence": "Develop technical fluency across cloud infrastructure",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: communicate clearly with senior engineering leaders",
+          "model_evidence": "communicate clearly with senior engineering leaders",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: communicate clearly with product leaders",
+          "model_evidence": "communicate clearly with product leaders",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: communicate clearly with executive leaders",
+          "model_evidence": "communicate clearly with executive leaders",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: highlight risks",
+          "model_evidence": "highlight risks",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: highlight mitigation plans",
+          "model_evidence": "highlight mitigation plans",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: highlight decision points",
+          "model_evidence": "highlight decision points",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience working on large-scale SaaS modernization initiatives",
+          "model_evidence": "Experience working on large-scale SaaS modernization initiatives",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience supporting IT management products",
+          "model_evidence": "Experience supporting IT management products",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience supporting security products",
+          "model_evidence": "Experience supporting security products",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience supporting MSP-focused products",
+          "model_evidence": "Experience supporting MSP-focused products",
+          "extraction_class": "job_requirement"
+        }
+      ]
+    },
+    {
+      "id": "a888a47b-f9b9-4916-b005-cc4a9322066e",
+      "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+      "job_id": "250d4712-ae4c-4536-8a9a-f119cb0c5247",
+      "job_title": "Technology Product Manager AI & Data Strategy",
+      "company": "Citi",
+      "source": "linkedin",
+      "description_length": 8281,
+      "extractor": "langextract",
+      "prompt_version": "job_requirements_langextract_v6_1",
+      "model_name": "qwen3.5:9b",
+      "save_requirements": false,
+      "status": "succeeded_with_warnings",
+      "started_at": "2026-09-21T11:57:11.100085+00:00",
+      "completed_at": "2026-09-21T12:00:26.577963+00:00",
+      "duration_ms": 195384,
+      "requirements_extracted": 68,
+      "requirements_rejected": 38,
+      "requirements_saved": null,
+      "extracted_requirements": [
+        {
+          "name": "Product vision and strategy definition",
+          "category": "responsibility",
+          "evidence": "define Product vision, strategy and roadmap",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Solution proposal and business case development",
+          "category": "responsibility",
+          "evidence": "develop solution proposals, business cases",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business process redesign",
+          "category": "responsibility",
+          "evidence": "Lead business process redesign",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Process mapping",
+          "category": "responsibility",
+          "evidence": "map existing and to-be processes",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Cross-functional collaboration",
+          "category": "responsibility",
+          "evidence": "drive cross-functional collaboration",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Communication with business and technology partners",
+          "category": "responsibility",
+          "evidence": "effective communication with business and technology partners",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Influence and persuasion",
+          "category": "responsibility",
+          "evidence": "guide, influence and convince others",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product development direction setting",
+          "category": "responsibility",
+          "evidence": "lay the direction for Product development",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product backlog and roadmap ownership",
+          "category": "responsibility",
+          "evidence": "Ownership of the Product backlog and roadmap",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product offering vision and direction outlining",
+          "category": "responsibility",
+          "evidence": "the vision and direction for the product offering over time",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Budget request development",
+          "category": "responsibility",
+          "evidence": "Develop solution proposals, business cases, and budget requests",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product roadmap definition and prioritization",
+          "category": "responsibility",
+          "evidence": "Define and prioritize and product roadmaps aligned with transformation initiative",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Engineering delivery coordination",
+          "category": "responsibility",
+          "evidence": "coordinate delivery with engineering",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Agile environment work",
+          "category": "responsibility",
+          "evidence": "Work in an agile environment (Scrum/ release ceremonies)",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business needs review",
+          "category": "responsibility",
+          "evidence": "continuously reviewing the business needs",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Priority refinement",
+          "category": "responsibility",
+          "evidence": "refining priorities",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Milestone and deliverable outlining",
+          "category": "responsibility",
+          "evidence": "outlining milestones and deliverables",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Opportunity and risk identification",
+          "category": "responsibility",
+          "evidence": "identifying opportunities and risks",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product features and epics creation in JIRA",
+          "category": "responsibility",
+          "evidence": "Responsible to create Product features and epics functionalities in JIRA",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Stakeholder alignment and iterative delivery",
+          "category": "responsibility",
+          "evidence": "Drive stakeholder alignment and iterative product delivery",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Operational optimization and digital transformation leadership",
+          "category": "responsibility",
+          "evidence": "Lead business process redesign, operational optimization, digital transformation initiative and change management",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Cross-functional dependency management",
+          "category": "responsibility",
+          "evidence": "Manage cross-functional dependencies",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Regulatory and risk alignment",
+          "category": "responsibility",
+          "evidence": "regulatory and risk alignment",
+          "requirement_level": "required"
+        },
+        {
+          "name": "User adoption and change management",
+          "category": "responsibility",
+          "evidence": "user adoption and change management",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Data analytical skills",
+          "category": "required_skill",
+          "evidence": "strong data analytical skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "JIRA",
+          "category": "responsibility",
+          "evidence": "JIRA",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Document business requirements",
+          "category": "responsibility",
+          "evidence": "document business requirements",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Draw meaningful insights",
+          "category": "responsibility",
+          "evidence": "draw meaningful insights",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Visualize conceptual and logical data models and flows",
+          "category": "responsibility",
+          "evidence": "visualize conceptual and logical data models and flows",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Collaborate with various teams and application owners",
+          "category": "responsibility",
+          "evidence": "Collaborate with various teams and application owners",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Unify data concepts across finance applications",
+          "category": "responsibility",
+          "evidence": "unify data concepts across finance applications",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Bring new ideas to the team",
+          "category": "responsibility",
+          "evidence": "brings new ideas back to the team",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Experiment with new models, new tooling, or new patterns",
+          "category": "responsibility",
+          "evidence": "with new models, new tooling, or new patterns",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Assess risk and impact when business decisions are made",
+          "category": "responsibility",
+          "evidence": "assess risk and impact when business decisions are made",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Drive compliance with applicable laws, rules, and regulations",
+          "category": "responsibility",
+          "evidence": "compliance with applicable laws, rules, and regulations",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Apply sound ethical judgment regarding personal behavior, conduct and business practices",
+          "category": "responsibility",
+          "evidence": "sound ethical judgment regarding personal behavior, conduct and business practices",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Understand and anticipate user needs",
+          "category": "responsibility",
+          "evidence": "Understand and anticipate user needs",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Analyze gaps in capabilities",
+          "category": "responsibility",
+          "evidence": "Analyze gaps in capabilities",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Provide evaluative judgment based on analysis of information",
+          "category": "responsibility",
+          "evidence": "Provide evaluative judgment based on analysis of information",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Report control gaps with transparency",
+          "category": "responsibility",
+          "evidence": "Report control gaps with transparency",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Take accountability of deliveries",
+          "category": "responsibility",
+          "evidence": "take accountability of deliveries",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Develop plans and execute functional strategies",
+          "category": "responsibility",
+          "evidence": "Develop plans and execute functional strategies",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Participate in day-to-day product management for core products",
+          "category": "responsibility",
+          "evidence": "Participate in day-to-day product management for core products",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Help the team prioritize",
+          "category": "responsibility",
+          "evidence": "help the team prioritize",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Negotiate",
+          "category": "responsibility",
+          "evidence": "negotiate",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Remove obstacles to achieve business results",
+          "category": "responsibility",
+          "evidence": "remove obstacles to achieve business results",
+          "requirement_level": "required"
+        },
+        {
+          "name": "8+ Years of Demonstrated experience in Product Management and/or Product Development discipline",
+          "category": "responsibility",
+          "evidence": "8+ Years of Demonstrated experience in Product Management and/or Product Development discipline",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Finance background",
+          "category": "responsibility",
+          "evidence": "Finance background",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Experience with Data pipelines",
+          "category": "responsibility",
+          "evidence": "Experience with Data pipelines",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Represent customer needs to guide product development features, functionality, and overall competitiveness",
+          "category": "responsibility",
+          "evidence": "Represent customer needs to guide product development features, functionality, and overall competitiveness",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Strong understanding of Finance processes",
+          "category": "responsibility",
+          "evidence": "Strong understanding of Finance processes",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Strong understanding of data flows",
+          "category": "responsibility",
+          "evidence": "Strong understanding of Finance processes and data flows",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Ability to interpret financial data",
+          "category": "responsibility",
+          "evidence": "ability to interpret financial data",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Financial products and asset classes familiarity",
+          "category": "responsibility",
+          "evidence": "Familiarity with Financial products and asset classes",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Transaction flow understanding",
+          "category": "responsibility",
+          "evidence": "of how transactions flow from source product systems to financial reporting",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Agentic AI/ML knowledge",
+          "category": "responsibility",
+          "evidence": "Strong working knowledge of Agentic AI/ML",
+          "requirement_level": "required"
+        },
+        {
+          "name": "AI vs traditional automation assessment",
+          "category": "responsibility",
+          "evidence": "Ability to critically assess where AI adds value vs, where traditional rule-based",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Data analysis experience",
+          "category": "responsibility",
+          "evidence": "Strong experience and background with Data analysis",
+          "requirement_level": "required"
+        },
+        {
+          "name": "SQL",
+          "category": "responsibility",
+          "evidence": "Basic, SQL",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Python",
+          "category": "responsibility",
+          "evidence": "Python",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Problem translation to AI/automation opportunities",
+          "category": "responsibility",
+          "evidence": "Proven ability to translate ambiguous business problems into structured AI and automation opportunities",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Analytical thinking and problem resolution",
+          "category": "responsibility",
+          "evidence": "Ability to apply ingenuity, creativity and analytical thinking to problem analysis and resolution",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Stakeholder consensus building and communication",
+          "category": "responsibility",
+          "evidence": "Build consensus and communicate the value proposition to key partners and stakeholders",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Critical questioning and process challenge",
+          "category": "responsibility",
+          "evidence": "ask right questions and challenge current ways of working",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Root cause identification",
+          "category": "responsibility",
+          "evidence": "identify root-cause of problems",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Self-motivation",
+          "category": "responsibility",
+          "evidence": "Highly self-motivated",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Decision management",
+          "category": "responsibility",
+          "evidence": "decision management skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Agile adaptability and learning",
+          "category": "responsibility",
+          "evidence": "willingness to learn and adapt in an agile environment",
+          "requirement_level": "required"
+        }
+      ],
+      "extraction_warnings": [
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: develop conceptual and logical data models",
+          "model_evidence": "develop conceptual and logical data models",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: trace lineage of data",
+          "model_evidence": "trace lineage of data",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Follow AI developments",
+          "model_evidence": "Follow AI developments",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Apply learning to products",
+          "model_evidence": "Apply learning to products",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Adhere to Policy",
+          "model_evidence": "Adhere to Policy",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Escalate, manage, and report control issues with transparency",
+          "model_evidence": "Escalate, manage, and report control issues with transparency",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Identify opportunities for optimization and efficiency",
+          "model_evidence": "Identify opportunities for optimization and efficiency",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Enhance user experience",
+          "model_evidence": "Enhance user experience",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Remediate risk",
+          "model_evidence": "Remediate risk",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Remediate control gaps",
+          "model_evidence": "Remediate control gaps",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Develop an approach or take action involving weighing various alternatives",
+          "model_evidence": "Develop an approach or take action involving weighing various alternatives",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Balance potentially conflicting situations using multiple sources of information",
+          "model_evidence": "Balance potentially conflicting situations using multiple sources of information",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Communicate clearly, directly, and proactively",
+          "model_evidence": "Communicate clearly, directly, and proactively",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Build with security, compliance, and AI safety in mind",
+          "model_evidence": "Build with security, compliance, and AI safety in mind",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Coordinate and integrate across units",
+          "model_evidence": "Coordinate and integrate across units",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Manage product delivery",
+          "model_evidence": "Manage product delivery",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Manage client experience",
+          "model_evidence": "Manage client experience",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Manage client communication strategies",
+          "model_evidence": "Manage client communication strategies",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience with virtualization",
+          "model_evidence": "Experience with virtualization",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience with analytics",
+          "model_evidence": "Experience with analytics",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience with Automation",
+          "model_evidence": "Experience with Automation",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience with management",
+          "model_evidence": "Experience with management",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience with process re-engineering",
+          "model_evidence": "Experience with process re-engineering",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Experience with AI-led transformation projects",
+          "model_evidence": "Experience with AI-led transformation projects",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Strong understanding of record to report",
+          "model_evidence": "Strong understanding of record to report",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Strong understanding of Accounting",
+          "model_evidence": "Strong understanding of Accounting",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Strong understanding of reconciliation",
+          "model_evidence": "Strong understanding of reconciliation",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Strong understanding of regulatory reporting",
+          "model_evidence": "Strong understanding of regulatory reporting",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Strong understanding of close process",
+          "model_evidence": "Strong understanding of close process",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: LLM knowledge",
+          "model_evidence": "LLM knowledge",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: A2A concepts knowledge",
+          "model_evidence": "A2A concepts knowledge",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Practical applications of AI/ML/A2A in business processes across financial services",
+          "model_evidence": "Practical applications of AI/ML/A2A in business processes across financial services",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Data management experience",
+          "model_evidence": "Data management experience",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Data automation experience",
+          "model_evidence": "Data automation experience",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ability to define problem statements",
+          "model_evidence": "Ability to define problem statements",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ability to define required data inputs",
+          "model_evidence": "Ability to define required data inputs",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ability to define expected outcomes",
+          "model_evidence": "Ability to define expected outcomes",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Effective communication skills",
+          "model_evidence": "Effective communication skills",
+          "extraction_class": "job_requirement"
+        }
+      ]
+    },
+    {
+      "id": "4c6669d0-d3e1-4b4e-bf14-6c7e32ac1f60",
+      "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+      "job_id": "6ae4c153-8176-4799-bc6c-4c9fddf0edae",
+      "job_title": "Technical Product Manager — AI Commerce Platform",
+      "company": "JD.COM",
+      "source": "linkedin",
+      "description_length": 3121,
+      "extractor": "langextract",
+      "prompt_version": "job_requirements_langextract_v6_1",
+      "model_name": "qwen3.5:9b",
+      "save_requirements": false,
+      "status": "succeeded_with_warnings",
+      "started_at": "2026-09-21T13:04:33.676908+00:00",
+      "completed_at": "2026-09-21T13:05:50.227747+00:00",
+      "duration_ms": 76455,
+      "requirements_extracted": 10,
+      "requirements_rejected": 32,
+      "requirements_saved": null,
+      "extracted_requirements": [
+        {
+          "name": "Python",
+          "category": "required_skill",
+          "evidence": "Python",
+          "requirement_level": "required"
+        },
+        {
+          "name": "English proficiency",
+          "category": "required_skill",
+          "evidence": "英文能力",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Customer solution design or developer growth role experience",
+          "category": "preferred_skill",
+          "evidence": "客户方案设计或开发者增长相关岗位经验",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Stripe/payment system integration experience",
+          "category": "preferred_skill",
+          "evidence": "Stripe/支付系统集成经验",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Open source project contributor",
+          "category": "preferred_skill",
+          "evidence": "开源项目贡献者",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Technical blog author",
+          "category": "preferred_skill",
+          "evidence": "技术博客作者",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "GitHub 200+ followers",
+          "category": "preferred_skill",
+          "evidence": "GitHub 200+ followers",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Product roadmap and requirement definition",
+          "category": "responsibility",
+          "evidence": "产品路线图与需求定义",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Competitor analysis and differentiation strategy",
+          "category": "responsibility",
+          "evidence": "竞品分析与差异化策略",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Customer solution design and implementation",
+          "category": "responsibility",
+          "evidence": "客户方案设计与落地",
+          "requirement_level": "required"
+        }
+      ],
+      "extraction_warnings": [
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 3 年 + 产品经理或 Solutions Engineer 经验",
+          "model_evidence": "3 年 + 产品经理或 Solutions Engineer 经验",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: AI/开发者工具/SaaS/Cloud/API 产品经验",
+          "model_evidence": "AI/开发者工具/SaaS/Cloud/API 产品经验",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: OpenAI SDK/API 集成",
+          "model_evidence": "OpenAI SDK/API 集成",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: LLM API 生态理解",
+          "model_evidence": "LLM API 生态理解",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: SDK 示例代码编写",
+          "model_evidence": "SDK 示例代码编写",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 开发者文档编写",
+          "model_evidence": "开发者文档编写",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Quick Start Guide 制作",
+          "model_evidence": "Quick Start Guide 制作",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: B2B 客户对接经验",
+          "model_evidence": "B2B 客户对接经验",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: AI API 聚合器/路由产品经验",
+          "model_evidence": "AI API 聚合器/路由产品经验",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: LLM 应用开发经验",
+          "model_evidence": "LLM 应用开发经验",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Phase 1 里程碑拆解",
+          "model_evidence": "Phase 1 里程碑拆解",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Feature List 与 Sprint 规划输出",
+          "model_evidence": "Feature List 与 Sprint 规划输出",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: User Stories 编写",
+          "model_evidence": "User Stories 编写",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 验收标准定义",
+          "model_evidence": "验收标准定义",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 竞品周报输出",
+          "model_evidence": "竞品周报输出",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 路由策略与定价配置方案设计",
+          "model_evidence": "路由策略与定价配置方案设计",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 客户技术接入与迁移协助",
+          "model_evidence": "客户技术接入与迁移协助",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 技术问题排查",
+          "model_evidence": "技术问题排查",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 签约决策数据驱动",
+          "model_evidence": "签约决策数据驱动",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: POC 交付与客户成功",
+          "model_evidence": "POC 交付与客户成功",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 合规与数据主权需求解决方案设计",
+          "model_evidence": "合规与数据主权需求解决方案设计",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 行业场景配置定制",
+          "model_evidence": "行业场景配置定制",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 成功案例产出",
+          "model_evidence": "成功案例产出",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 开发者文档站搭建",
+          "model_evidence": "开发者文档站搭建",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: SDK 及接入示例维护",
+          "model_evidence": "SDK 及接入示例维护",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 行业场景 Demo 维护",
+          "model_evidence": "行业场景 Demo 维护",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 开发者社区运营",
+          "model_evidence": "开发者社区运营",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: GitHub Issues 响应",
+          "model_evidence": "GitHub Issues 响应",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 技术内容输出",
+          "model_evidence": "技术内容输出",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 开发者增长指标追踪",
+          "model_evidence": "开发者增长指标追踪",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 核心产品指标定义",
+          "model_evidence": "核心产品指标定义",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: 产品决策与优先级调整数据洞察驱动",
+          "model_evidence": "产品决策与优先级调整数据洞察驱动",
+          "extraction_class": "job_requirement"
+        }
+      ]
+    },
+    {
+      "id": "9cb2dc7b-22d3-4611-b6d2-35cd70ee58af",
+      "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+      "job_id": "ea7968ec-0096-4344-bb49-78f61d978c38",
+      "job_title": "AI Technical Product Manager",
+      "company": "Amber",
+      "source": "linkedin",
+      "description_length": 2792,
+      "extractor": "langextract",
+      "prompt_version": "job_requirements_langextract_v6_1",
+      "model_name": "qwen3.5:9b",
+      "save_requirements": false,
+      "status": "succeeded_with_warnings",
+      "started_at": "2026-09-21T14:13:46.186176+00:00",
+      "completed_at": "2026-09-21T14:15:22.576984+00:00",
+      "duration_ms": 96297,
+      "requirements_extracted": 38,
+      "requirements_rejected": 19,
+      "requirements_saved": null,
+      "extracted_requirements": [
+        {
+          "name": "AI-driven products or initiatives",
+          "category": "experience",
+          "evidence": "AI-driven products or initiatives",
+          "requirement_level": "required"
+        },
+        {
+          "name": "AI agents",
+          "category": "required_skill",
+          "evidence": "AI agents",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Automation",
+          "category": "required_skill",
+          "evidence": "automation",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Rapid prototyping",
+          "category": "required_skill",
+          "evidence": "rapid prototyping",
+          "requirement_level": "required"
+        },
+        {
+          "name": "LLMs",
+          "category": "required_skill",
+          "evidence": "LLMs",
+          "requirement_level": "required"
+        },
+        {
+          "name": "No-code/low-code stack",
+          "category": "required_skill",
+          "evidence": "no-code/low-code stack",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Sales",
+          "category": "responsibility",
+          "evidence": "sales",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Ops",
+          "category": "responsibility",
+          "evidence": "ops",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Support",
+          "category": "responsibility",
+          "evidence": "support",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Engineering",
+          "category": "responsibility",
+          "evidence": "engineering",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business",
+          "category": "responsibility",
+          "evidence": "business",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Ideation",
+          "category": "responsibility",
+          "evidence": "ideation",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Prototyping",
+          "category": "responsibility",
+          "evidence": "prototyping",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Launch",
+          "category": "responsibility",
+          "evidence": "launch",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Internal enablement",
+          "category": "responsibility",
+          "evidence": "internal enablement",
+          "requirement_level": "required"
+        },
+        {
+          "name": "AI",
+          "category": "required_skill",
+          "evidence": "AI",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product Management",
+          "category": "experience",
+          "evidence": "Product Management",
+          "requirement_level": "required"
+        },
+        {
+          "name": "AI initiatives",
+          "category": "experience",
+          "evidence": "AI initiatives",
+          "requirement_level": "required"
+        },
+        {
+          "name": "AI products",
+          "category": "experience",
+          "evidence": "AI products",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Prompting",
+          "category": "required_skill",
+          "evidence": "prompting",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Workflows",
+          "category": "required_skill",
+          "evidence": "workflows",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Prototypes",
+          "category": "experience",
+          "evidence": "prototypes",
+          "requirement_level": "required"
+        },
+        {
+          "name": "MVPs",
+          "category": "experience",
+          "evidence": "MVPs",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Vibe coding",
+          "category": "required_skill",
+          "evidence": "vibe coding",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Efficiency",
+          "category": "required_skill",
+          "evidence": "efficiency",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Scale",
+          "category": "required_skill",
+          "evidence": "scale",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Problems",
+          "category": "required_skill",
+          "evidence": "problems",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Prioritize",
+          "category": "required_skill",
+          "evidence": "prioritize",
+          "requirement_level": "required"
+        },
+        {
+          "name": "OpenAI",
+          "category": "preferred_skill",
+          "evidence": "OpenAI",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "LangChain",
+          "category": "preferred_skill",
+          "evidence": "LangChain",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Zapier",
+          "category": "preferred_skill",
+          "evidence": "Zapier",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Notion AI",
+          "category": "preferred_skill",
+          "evidence": "Notion AI",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Early-stage startups",
+          "category": "experience",
+          "evidence": "early-stage startups",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Operations",
+          "category": "preferred_skill",
+          "evidence": "operations",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "LLM/agent evaluation frameworks",
+          "category": "preferred_skill",
+          "evidence": "LLM/agent evaluation frameworks",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Engineering teams",
+          "category": "preferred_skill",
+          "evidence": "engineering teams",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "AI experimentation",
+          "category": "preferred_skill",
+          "evidence": "AI experimentation",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Evaluation",
+          "category": "preferred_skill",
+          "evidence": "evaluation",
+          "requirement_level": "preferred"
+        }
+      ],
+      "extraction_warnings": [
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: iteration",
+          "model_evidence": "iteration",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Product-led roles",
+          "model_evidence": "Product-led roles",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: automation tools",
+          "model_evidence": "automation tools",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: agent-based systems",
+          "model_evidence": "agent-based systems",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: rapid experimentation",
+          "model_evidence": "rapid experimentation",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: systems",
+          "model_evidence": "systems",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: ship solutions",
+          "model_evidence": "ship solutions",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Data-driven decision-making",
+          "model_evidence": "Data-driven decision-making",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: AI-first companies",
+          "model_evidence": "AI-first companies",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: customer experience",
+          "model_evidence": "customer experience",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: eval pipelines",
+          "model_evidence": "eval pipelines",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: deployment",
+          "model_evidence": "deployment",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "duplicate_requirement",
+          "record": {
+            "name": "AI agents",
+            "category": "required_skill",
+            "evidence": "AI Agents",
+            "requirement_level": "required"
+          },
+          "message": "Duplicate requirement rejected: AI agents",
+          "model_evidence": "AI Agents"
+        },
+        {
+          "type": "duplicate_requirement",
+          "record": {
+            "name": "Automation",
+            "category": "required_skill",
+            "evidence": "Automation",
+            "requirement_level": "required"
+          },
+          "message": "Duplicate requirement rejected: Automation",
+          "model_evidence": "Automation"
+        },
+        {
+          "type": "duplicate_requirement",
+          "record": {
+            "name": "AI agents",
+            "category": "required_skill",
+            "evidence": "AI agents",
+            "requirement_level": "required"
+          },
+          "message": "Duplicate requirement rejected: AI agents",
+          "model_evidence": "AI agents"
+        },
+        {
+          "type": "duplicate_requirement",
+          "record": {
+            "name": "LLMs",
+            "category": "required_skill",
+            "evidence": "LLMs",
+            "requirement_level": "required"
+          },
+          "message": "Duplicate requirement rejected: LLMs",
+          "model_evidence": "LLMs"
+        },
+        {
+          "type": "duplicate_requirement",
+          "record": {
+            "name": "Automation",
+            "category": "required_skill",
+            "evidence": "automation",
+            "requirement_level": "required"
+          },
+          "message": "Duplicate requirement rejected: Automation",
+          "model_evidence": "automation"
+        },
+        {
+          "type": "duplicate_requirement",
+          "record": {
+            "name": "Automation",
+            "category": "preferred_skill",
+            "evidence": "automation",
+            "requirement_level": "preferred"
+          },
+          "message": "Duplicate requirement rejected: Automation",
+          "model_evidence": "automation"
+        },
+        {
+          "type": "duplicate_requirement",
+          "record": {
+            "name": "Sales",
+            "category": "preferred_skill",
+            "evidence": "sales",
+            "requirement_level": "preferred"
+          },
+          "message": "Duplicate requirement rejected: Sales",
+          "model_evidence": "sales"
+        }
+      ]
+    },
+    {
+      "id": "9674d733-1dc6-4edb-bb6e-41140a712af3",
+      "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+      "job_id": "8372bb42-c38a-4061-92cf-d98e4ebec219",
+      "job_title": "Product Manager -Technical (Life Insurance & Annuity)",
+      "company": "Zinnia",
+      "source": "linkedin",
+      "description_length": 4189,
+      "extractor": "langextract",
+      "prompt_version": "job_requirements_langextract_v6_1",
+      "model_name": "qwen3.5:9b",
+      "save_requirements": false,
+      "status": "succeeded_with_warnings",
+      "started_at": "2026-09-21T13:15:42.877752+00:00",
+      "completed_at": "2026-09-21T13:17:42.701604+00:00",
+      "duration_ms": 119732,
+      "requirements_extracted": 53,
+      "requirements_rejected": 15,
+      "requirements_saved": null,
+      "extracted_requirements": [
+        {
+          "name": "Product Management experience",
+          "category": "experience",
+          "evidence": "5+ years of Product Management experience",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product Management or Business Analysis experience",
+          "category": "responsibility",
+          "evidence": "5+ years’ work experience in Product Management or Business Analysis",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Life Insurance or Annuity domain experience",
+          "category": "responsibility",
+          "evidence": "Experience with Life Insurance or Annuity domain",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product Development Lifecycle",
+          "category": "responsibility",
+          "evidence": "Product Development Lifecycle",
+          "requirement_level": "required"
+        },
+        {
+          "name": "API integrations",
+          "category": "responsibility",
+          "evidence": "API integrations",
+          "requirement_level": "required"
+        },
+        {
+          "name": "SQL",
+          "category": "responsibility",
+          "evidence": "SQL",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Technology system interfaces",
+          "category": "responsibility",
+          "evidence": "technology system interfaces",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Data integration",
+          "category": "responsibility",
+          "evidence": "data integration",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Networks",
+          "category": "responsibility",
+          "evidence": "networks",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Client/Server",
+          "category": "responsibility",
+          "evidence": "Client/Server",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Operating systems",
+          "category": "responsibility",
+          "evidence": "operating systems",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business Process Modelling",
+          "category": "responsibility",
+          "evidence": "Business Process Modelling",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Decision tables/trees",
+          "category": "responsibility",
+          "evidence": "decision tables/trees",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Data flows",
+          "category": "responsibility",
+          "evidence": "data flows",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Customer service skills",
+          "category": "responsibility",
+          "evidence": "customer service skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Relationship management skills",
+          "category": "responsibility",
+          "evidence": "relationship management skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Interpersonal communication skills",
+          "category": "responsibility",
+          "evidence": "interpersonal communication skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product lifecycle process execution",
+          "category": "responsibility",
+          "evidence": "Contribute into the execution of all product lifecycle processes",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product research",
+          "category": "responsibility",
+          "evidence": "product research",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Market research",
+          "category": "responsibility",
+          "evidence": "market research",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Competitive analysis",
+          "category": "responsibility",
+          "evidence": "competitive analysis",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Planning",
+          "category": "responsibility",
+          "evidence": "planning",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Positioning",
+          "category": "responsibility",
+          "evidence": "positioning",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Roadmap development",
+          "category": "responsibility",
+          "evidence": "roadmap development",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Requirements development",
+          "category": "responsibility",
+          "evidence": "requirements development",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product launch",
+          "category": "responsibility",
+          "evidence": "product launch",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Consumer needs analysis",
+          "category": "responsibility",
+          "evidence": "Analyse consumer needs",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Existing systems understanding",
+          "category": "responsibility",
+          "evidence": "Gain a deep understanding of existing systems",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product gap identification and filling",
+          "category": "responsibility",
+          "evidence": "identify and fill product gaps",
+          "requirement_level": "required"
+        },
+        {
+          "name": "New idea generation",
+          "category": "responsibility",
+          "evidence": "generate new ideas",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Market share growth",
+          "category": "responsibility",
+          "evidence": "grow market share",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Customer experience improvement",
+          "category": "responsibility",
+          "evidence": "improve customer experience",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Growth driving",
+          "category": "responsibility",
+          "evidence": "drive growth",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Cross-functional team collaboration",
+          "category": "responsibility",
+          "evidence": "Works with a cross-functional team",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product requirements fulfilment",
+          "category": "responsibility",
+          "evidence": "ensure fulfilment of product requirements",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product performance evaluation",
+          "category": "responsibility",
+          "evidence": "evaluates product performance",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product commercialization transition",
+          "category": "responsibility",
+          "evidence": "transition products from development to commercialization",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product delivery and deployment date determination",
+          "category": "responsibility",
+          "evidence": "Assists in determining product delivery and deployment dates",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business and technical solutions development and execution",
+          "category": "responsibility",
+          "evidence": "Assist in Developing and executing proposed business and technical solutions",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Engineering team collaboration",
+          "category": "responsibility",
+          "evidence": "Work with engineering teams",
+          "requirement_level": "required"
+        },
+        {
+          "name": "API integrations design and management",
+          "category": "responsibility",
+          "evidence": "design and manage API integrations across platforms",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Escalated production issues research and investigation",
+          "category": "responsibility",
+          "evidence": "Assist in the research and investigation of escalated production issues",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Issue resolution engagement",
+          "category": "responsibility",
+          "evidence": "engage teams for resolution",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business impact documentation",
+          "category": "responsibility",
+          "evidence": "Document business impact",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Willingness to develop industry-related knowledge",
+          "category": "responsibility",
+          "evidence": "Willingness to develop industry-related knowledge",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Analytical skills",
+          "category": "responsibility",
+          "evidence": "Analytical, organized with excellent written and verbal communication skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Organization",
+          "category": "responsibility",
+          "evidence": "organized",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Written communication",
+          "category": "responsibility",
+          "evidence": "excellent written and verbal communication skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Verbal communication",
+          "category": "responsibility",
+          "evidence": "excellent written and verbal communication skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Self-starter",
+          "category": "responsibility",
+          "evidence": "Must be a self-starter, flexible and motivated",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Flexibility",
+          "category": "responsibility",
+          "evidence": "Must be a self-starter, flexible and motivated",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Motivation",
+          "category": "responsibility",
+          "evidence": "Must be a self-starter, flexible and motivated",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Experience in BFSI Industry across Annuity, mutual funds, financial services, or life insurance",
+          "category": "responsibility",
+          "evidence": "Great to have experience in BFSI Industry across Annuity, mutual funds, financial services, or life insurance",
+          "requirement_level": "required"
+        }
+      ],
+      "extraction_warnings": [
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Bachelor's/Master's Degree",
+          "model_evidence": "Bachelor's/Master's Degree",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: written communication skills",
+          "model_evidence": "written communication skills",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: oral communication skills",
+          "model_evidence": "oral communication skills",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: current market trends analysis",
+          "model_evidence": "current market trends analysis",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: potential partnerships analysis",
+          "model_evidence": "potential partnerships analysis",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: ROI analysis",
+          "model_evidence": "ROI analysis",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: build vs. buy perspective analysis",
+          "model_evidence": "build vs. buy perspective analysis",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: customer experience understanding",
+          "model_evidence": "customer experience understanding",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: new product releases management",
+          "model_evidence": "new product releases management",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: feature releases management",
+          "model_evidence": "feature releases management",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: maintenance releases management",
+          "model_evidence": "maintenance releases management",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: regular corrective service or service pack releases management",
+          "model_evidence": "regular corrective service or service pack releases management",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: research and resolution steps documentation",
+          "model_evidence": "research and resolution steps documentation",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: long-term preventative measures documentation",
+          "model_evidence": "long-term preventative measures documentation",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: incident reports creation",
+          "model_evidence": "incident reports creation",
+          "extraction_class": "job_requirement"
+        }
+      ]
+    },
+    {
+      "id": "ebe86f87-ac1d-4b9b-8167-f12bd486b0d3",
+      "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+      "job_id": "d24a042f-1c16-40ec-8769-3b5d7d39c9b8",
+      "job_title": "Aveva Wonderware Product Owner",
+      "company": "ENGIE India",
+      "source": "linkedin",
+      "description_length": 4708,
+      "extractor": "langextract",
+      "prompt_version": "job_requirements_langextract_v6_1",
+      "model_name": "qwen3.5:9b",
+      "save_requirements": false,
+      "status": "succeeded_with_warnings",
+      "started_at": "2026-09-21T14:00:18.316552+00:00",
+      "completed_at": "2026-09-21T14:01:58.152006+00:00",
+      "duration_ms": 99740,
+      "requirements_extracted": 33,
+      "requirements_rejected": 15,
+      "requirements_saved": null,
+      "extracted_requirements": [
+        {
+          "name": "Liaison between business and feature team",
+          "category": "responsibility",
+          "evidence": "Act as the liaison between the GHC business (client) and the feature team, translating business needs into actionable requirements and specifications",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Coordinate software version definition, development, and production",
+          "category": "responsibility",
+          "evidence": "Coordinate the definition, development, and production of new software versions",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Manage feature team backlog using Azure DevOps",
+          "category": "responsibility",
+          "evidence": "Manage the feature team backlog using tools such as Azure DevOps",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Plan deliveries for sprints and releases",
+          "category": "responsibility",
+          "evidence": "plan deliveries for upcoming sprints and releases",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Communicate with global Product Owner and stakeholders",
+          "category": "responsibility",
+          "evidence": "Communicate regularly with the global Product Owner and other stakeholders",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Collect requirements from stakeholders",
+          "category": "responsibility",
+          "evidence": "Collect requirements from the head of the GHC and other stakeholders",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Write and maintain specifications",
+          "category": "responsibility",
+          "evidence": "write and maintain general and detailed specifications",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Highlight risks, dependencies, and challenges",
+          "category": "responsibility",
+          "evidence": "Highlight risks, dependencies, and challenges",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Plan and prioritize deliveries",
+          "category": "responsibility",
+          "evidence": "Plan and prioritize deliveries for sprints and upcoming months",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Define detailed specifications including inputs/outputs, mockups, and tasks",
+          "category": "responsibility",
+          "evidence": "Define detailed specifications, including inputs/outputs, mockups, and tasks",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Oversee testing, production deployment, and training",
+          "category": "responsibility",
+          "evidence": "Oversee testing, production deployment, and training activities",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Ensure team integration into dynamic, agile project environment",
+          "category": "responsibility",
+          "evidence": "Ensure the team integrates into a dynamic, agile project environment",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Collaborate with large, international teams",
+          "category": "responsibility",
+          "evidence": "collaborates effectively with large, international teams",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Facilitate handover and knowledge transfer from R&F Digital&IT team",
+          "category": "responsibility",
+          "evidence": "Facilitate the handover and knowledge transfer from the R&F Digital&IT team in France",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Travel to France (Lyon or Paris)",
+          "category": "responsibility",
+          "evidence": "Travel to France (Lyon or Paris) as required",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Bachelor's degree in computer science, engineering, or a related field",
+          "category": "education",
+          "evidence": "Bachelor’s degree in computer science, engineering, or a related field",
+          "requirement_level": "required"
+        },
+        {
+          "name": "5+ years of experience in product ownership, project management, or similar roles in OT/SCADA/hypervision environments",
+          "category": "experience",
+          "evidence": "Minimum of 5 years of experience in product ownership, project management, or similar roles in OT/SCADA/hypervision environments",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Experience in managing software projects in renewable energy or industrial automation sector",
+          "category": "experience",
+          "evidence": "Proven experience in managing software projects in the renewable energy or industrial automation sector",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Experience working with Aveva Wonderware System Platform, OMI, and related technologies",
+          "category": "preferred_skill",
+          "evidence": "Experience working with Aveva Wonderware System Platform, OMI, and related technologies",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Advanced expertise in OT project management (hypervision, SCADA, etc.)",
+          "category": "required_skill",
+          "evidence": "Advanced expertise in OT project management (hypervision, SCADA, etc.)",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Aveva Wonderware System Platform familiarity",
+          "category": "preferred_skill",
+          "evidence": "Familiarity with Aveva Wonderware System Platform",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Data historization (Aveva Historian) understanding",
+          "category": "preferred_skill",
+          "evidence": "Understanding of data historization (Aveva Historian)",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Industrial protocols (MQTT, OPC, Modbus, etc.) understanding",
+          "category": "preferred_skill",
+          "evidence": "Understanding of data historization (Aveva Historian) and industrial protocols (MQTT, OPC, Modbus, etc.)",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Agile methodologies (SCRUM, KANBAN) experience",
+          "category": "required_skill",
+          "evidence": "Experience with Agile methodologies (SCRUM, KANBAN)",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Backlog management tools (e.g., Azure DevOps) experience",
+          "category": "required_skill",
+          "evidence": "Experience with Agile methodologies (SCRUM, KANBAN) and backlog management tools (e.g., Azure DevOps)",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Advanced proficiency in English",
+          "category": "required_skill",
+          "evidence": "Advanced proficiency in English",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Stakeholder management skills",
+          "category": "required_skill",
+          "evidence": "stakeholder management skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Collaborative work in large, dynamic, and multicultural teams",
+          "category": "required_skill",
+          "evidence": "Ability to work collaboratively in large, dynamic, and multicultural teams",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Commitment to delivering high-quality solutions",
+          "category": "required_skill",
+          "evidence": "commitment to delivering high-quality solutions",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Decision-making abilities",
+          "category": "required_skill",
+          "evidence": "decision-making abilities",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Planning skills",
+          "category": "required_skill",
+          "evidence": "planning skills",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Ability to manage ambiguity",
+          "category": "required_skill",
+          "evidence": "Ability to manage ambiguity",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Ability to drive clarity in complex environments",
+          "category": "required_skill",
+          "evidence": "Ability to manage ambiguity and drive clarity in complex environments",
+          "requirement_level": "required"
+        }
+      ],
+      "extraction_warnings": [
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Maintain alignment with ENGIE's global product strategy",
+          "model_evidence": "Maintain alignment with ENGIE's global product strategy",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Proactively manage risks, dependencies, and challenges with relevant parties",
+          "model_evidence": "Proactively manage risks, dependencies, and challenges with relevant parties",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Coordinate the feature team's activities",
+          "model_evidence": "Coordinate the feature team's activities",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ensure effective collaboration and agile delivery",
+          "model_evidence": "Ensure effective collaboration and agile delivery",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Familiarity with OMI",
+          "model_evidence": "Familiarity with OMI",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Familiarity with Aveva Unified Operation Center (UOC)",
+          "model_evidence": "Familiarity with Aveva Unified Operation Center (UOC)",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: French language ability",
+          "model_evidence": "French language ability",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Communication skills",
+          "model_evidence": "Communication skills",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Coordination skills",
+          "model_evidence": "Coordination skills",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Customer-focused approach",
+          "model_evidence": "Customer-focused approach",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Adaptability to changing priorities",
+          "model_evidence": "Adaptability to changing priorities",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ability to work independently",
+          "model_evidence": "Ability to work independently",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ability to work in a fast-paced environment",
+          "model_evidence": "Ability to work in a fast-paced environment",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Leadership abilities",
+          "model_evidence": "Leadership abilities",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Organizational skills",
+          "model_evidence": "Organizational skills",
+          "extraction_class": "job_requirement"
+        }
+      ]
+    },
+    {
+      "id": "9642c63f-baf5-4f3d-a73a-3a0d8284faea",
+      "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+      "job_id": "61d7995f-451b-4ce5-8671-501acfff7876",
+      "job_title": "Work DAY Technical Product Delivery Manager OR Senior Product Manager",
+      "company": "Cloudxtreme",
+      "source": "naukri",
+      "description_length": 5774,
+      "extractor": "langextract",
+      "prompt_version": "job_requirements_langextract_v6_1",
+      "model_name": "qwen3.5:9b",
+      "save_requirements": false,
+      "status": "succeeded_with_warnings",
+      "started_at": "2026-09-21T12:53:05.242872+00:00",
+      "completed_at": "2026-09-21T12:55:08.256064+00:00",
+      "duration_ms": 122919,
+      "requirements_extracted": 53,
+      "requirements_rejected": 12,
+      "requirements_saved": null,
+      "extracted_requirements": [
+        {
+          "name": "HCM technical solutions capabilities",
+          "category": "required_skill",
+          "evidence": "HCM technical solutions capabilities",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Systems/software expertise",
+          "category": "required_skill",
+          "evidence": "systems/software expertise",
+          "requirement_level": "required"
+        },
+        {
+          "name": "HCM product design",
+          "category": "required_skill",
+          "evidence": "HCM product design",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Technical solutions",
+          "category": "required_skill",
+          "evidence": "technical solutions",
+          "requirement_level": "required"
+        },
+        {
+          "name": "In-depth technical knowledge",
+          "category": "required_skill",
+          "evidence": "in depth technical knowledge",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product/software integration",
+          "category": "responsibility",
+          "evidence": "integration of the product/software",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product design",
+          "category": "responsibility",
+          "evidence": "product design",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Implementing solutions",
+          "category": "responsibility",
+          "evidence": "implementing solutions",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Service knowledge",
+          "category": "responsibility",
+          "evidence": "service knowledge",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Requirements to design translation",
+          "category": "responsibility",
+          "evidence": "Translate requirements and processes into realistic, innovative business and system design solutions",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Collaboration with technical teams",
+          "category": "responsibility",
+          "evidence": "Work closely with all technical teams",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Gap closure",
+          "category": "responsibility",
+          "evidence": "close gaps quickly",
+          "requirement_level": "required"
+        },
+        {
+          "name": "System development acceleration",
+          "category": "responsibility",
+          "evidence": "speed up the system development process",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Unit testing oversight",
+          "category": "responsibility",
+          "evidence": "Ensure unit testing",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Quality assurance testing",
+          "category": "responsibility",
+          "evidence": "Conduct quality assurance testing",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Testing signoff",
+          "category": "responsibility",
+          "evidence": "provide signoff",
+          "requirement_level": "required"
+        },
+        {
+          "name": "User acceptance testing assistance",
+          "category": "responsibility",
+          "evidence": "Assist with the user acceptance testing",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Functional to development team liaison",
+          "category": "responsibility",
+          "evidence": "Serve as the conduit between the internal functional owner community and the software development team",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Task status updates",
+          "category": "responsibility",
+          "evidence": "Keep project manager and other critical members of the team updated on task status",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Risk and issue logging and tracking",
+          "category": "responsibility",
+          "evidence": "ensure risks and issues are logged and tracked",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Project plan input",
+          "category": "responsibility",
+          "evidence": "Provide input to project plan",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Implementation and deployment planning",
+          "category": "responsibility",
+          "evidence": "create implementation / deploy plans",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Post go-live support",
+          "category": "responsibility",
+          "evidence": "Provide post go live / hyper-care support",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Issue troubleshooting under pressure",
+          "category": "responsibility",
+          "evidence": "troubleshoot issues with critical thinking in pressure situations",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Process gap identification",
+          "category": "responsibility",
+          "evidence": "Support G&A IT leadership to identify gaps in existing processes",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Project disposition determination",
+          "category": "responsibility",
+          "evidence": "determine disposition",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Process and technology improvement recommendations",
+          "category": "responsibility",
+          "evidence": "provide recommendations for future process & technology improvements",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Customer relationship management",
+          "category": "responsibility",
+          "evidence": "Build and maintain relationships with assigned customers",
+          "requirement_level": "required"
+        },
+        {
+          "name": "HR and Service application technology knowledge",
+          "category": "responsibility",
+          "evidence": "Develop and continually strengthen deep knowledge of HR and Service application technologies",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business process knowledge",
+          "category": "responsibility",
+          "evidence": "Develop and continually strengthen deep knowledge of HR and Service application technologies and business processes",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Workstream leadership",
+          "category": "responsibility",
+          "evidence": "Act as a workstream lead",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Process area plan alignment",
+          "category": "responsibility",
+          "evidence": "ensure plans that support key process areas meet business requirements now and for the future",
+          "requirement_level": "required"
+        },
+        {
+          "name": "HR technical lead and systems analyst experience",
+          "category": "experience",
+          "evidence": "8+ years of proven HR experience working as a technical lead and experienced systems analyst for major projects",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Core HR processes experience",
+          "category": "experience",
+          "evidence": "Strong experience with core HR processes and supporting cross functional technology platforms",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Workday Integration experience",
+          "category": "experience",
+          "evidence": "6+ years of experience with Workday Integration types including EIB, Core Connectors, Cloud Connect, Workday Studio, BIRT reports, RAAS, custom and calculated fields, XPATH, XML, and XSLT File Transformation Knowledge",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Third-party system integration experience",
+          "category": "experience",
+          "evidence": "6+ years integrating systems with third-party service vendors",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Dell Boomi iPaaS experience",
+          "category": "experience",
+          "evidence": "6+ years of Dell Boomi iPaaS Integration Hub using APIs, web services connectors, packaged components, extensions, security certifications, debugging error and process logs. Experience deploying code from Atoms to Molecules and ensuring technical development produces performance best practices in Boomi",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Workday functional module experience",
+          "category": "experience",
+          "evidence": "6+ years technical foundation experience with Workday Recruiting, HCM (Position Mgmt., Security, MSS/ESS, Onboarding), Compensation, Advanced Compensation",
+          "requirement_level": "required"
+        },
+        {
+          "name": "ServiceNow experience",
+          "category": "required_skill",
+          "evidence": "Experience with ServiceNow or similar cloud application",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Beeline experience",
+          "category": "preferred_skill",
+          "evidence": "Experience with of Beeline experience",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Application development expertise",
+          "category": "required_skill",
+          "evidence": "Technical expertise with application development to assist with the design and specification development",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business process analysis and documentation",
+          "category": "required_skill",
+          "evidence": "Ability to analyze and document complex business processes",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Visio documentation",
+          "category": "required_skill",
+          "evidence": "Experience documenting process and system flowcharts in Visio",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Testing phase requirement traceability",
+          "category": "responsibility",
+          "evidence": "Experience facilitating, supporting and ensuring traceability with requirements exists during testing phases (SIT, UAT, etc.)",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Testing tools experience",
+          "category": "preferred_skill",
+          "evidence": "experience using testing tools",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Collaboration with leadership to define processes and measure delivery",
+          "category": "required_skill",
+          "evidence": "Strong ability to collaborate with G&A IT leaders, business leadership, senior technologists, to define business processes, analyze operational efficiencies, implement creative solutions and measure delivery results",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Analytical thinking and proactive problem solving",
+          "category": "required_skill",
+          "evidence": "Ability to think analytically, a proactive problem solver",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Technical design influence",
+          "category": "required_skill",
+          "evidence": "Ability to creatively and constructively challenge/influence technical designs to ensure simplicity and supportability",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Agile mindset",
+          "category": "required_skill",
+          "evidence": "Collaborative, agile mindset to drive speedy, creative and efficient use of technology and data to drive business value",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business acumen",
+          "category": "education",
+          "evidence": "High degree of business acumen and urgency to act",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Technical concept translation and presentation",
+          "category": "required_skill",
+          "evidence": "Capable of translating and presenting technical concepts into practical business terms in both small and large group settings",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Task prioritization and organization",
+          "category": "required_skill",
+          "evidence": "Well organized individual who can prioritize tasks and cut through details to identify units of work needed to complete the project",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Communication skills",
+          "category": "required_skill",
+          "evidence": "Excellent communications skills",
+          "requirement_level": "required"
+        }
+      ],
+      "extraction_warnings": [
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: platform knowledge",
+          "model_evidence": "platform knowledge",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: product knowledge",
+          "model_evidence": "product knowledge",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: gather requirements",
+          "model_evidence": "gather requirements",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: document requirements",
+          "model_evidence": "document requirements",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: state business needs",
+          "model_evidence": "state business needs",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: document designs",
+          "model_evidence": "document designs",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: socialize designs with technical teams",
+          "model_evidence": "socialize designs with technical teams",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Ensure integration testing",
+          "model_evidence": "Ensure integration testing",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: document unit test plans",
+          "model_evidence": "document unit test plans",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: provide evidence of testing",
+          "model_evidence": "provide evidence of testing",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "invalid_attributes",
+          "message": "LangExtract returned an invalid 'name' attribute for 'A '",
+          "model_evidence": "A ",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "duplicate_requirement",
+          "record": {
+            "name": "Workday functional module experience",
+            "category": "preferred_skill",
+            "evidence": "Experience with Performance, Succession Planning, Learning, Absence, Time Tracking, Payroll, Prism and Extend",
+            "requirement_level": "preferred"
+          },
+          "message": "Duplicate requirement rejected: Workday functional module experience",
+          "model_evidence": "Experience with Performance, Succession Planning, Learning, Absence, Time Tracking, Payroll, Prism and Extend"
+        }
+      ]
+    },
+    {
+      "id": "0ecad31d-7b28-45fb-b9bd-947723ab9f4f",
+      "batch_id": "aa04704a-0aa4-4b2f-9a60-04e1b74a0b27",
+      "job_id": "33fbdd81-d554-4153-9121-a39be7f26c23",
+      "job_title": "Sr. Product Manager-Technical, Amazon Financial Foundation Services (AFFS)",
+      "company": "Amazon",
+      "source": "linkedin",
+      "description_length": 4632,
+      "extractor": "langextract",
+      "prompt_version": "job_requirements_langextract_v6_1",
+      "model_name": "qwen3.5:9b",
+      "save_requirements": false,
+      "status": "succeeded_with_warnings",
+      "started_at": "2026-09-21T12:09:02.43521+00:00",
+      "completed_at": "2026-09-21T12:10:25.801853+00:00",
+      "duration_ms": 83269,
+      "requirements_extracted": 33,
+      "requirements_rejected": 11,
+      "requirements_saved": null,
+      "extracted_requirements": [
+        {
+          "name": "Product vision alignment",
+          "category": "responsibility",
+          "evidence": "Define and align the product vision with business goals",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product roadmap development",
+          "category": "responsibility",
+          "evidence": "Develop the product roadmap",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Release prioritization",
+          "category": "responsibility",
+          "evidence": "prioritize releases",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Requirements translation",
+          "category": "responsibility",
+          "evidence": "translate customer needs into requirements",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Consistent delivery cadence",
+          "category": "responsibility",
+          "evidence": "deliver in a consistent cadence",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product lifecycle execution",
+          "category": "responsibility",
+          "evidence": "Ensure consistent execution of the product lifecycle from concept to launch",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product launch coordination",
+          "category": "responsibility",
+          "evidence": "Plan and coordinate product launches across teams",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Product vision planning",
+          "category": "responsibility",
+          "evidence": "Define plans to achieve the product vision and business results",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Release activity coordination",
+          "category": "responsibility",
+          "evidence": "Coordinate activities into releases",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Schedule management",
+          "category": "responsibility",
+          "evidence": "Manage schedules",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Meeting facilitation",
+          "category": "responsibility",
+          "evidence": "Facilitate meetings",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Leadership messaging delivery",
+          "category": "responsibility",
+          "evidence": "deliver appropriate messaging to leadership",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Decision capture",
+          "category": "responsibility",
+          "evidence": "capture key decisions",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Stakeholder communication management",
+          "category": "responsibility",
+          "evidence": "manage effective communication to stakeholders using company protocols",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Accounts receivable product ownership",
+          "category": "responsibility",
+          "evidence": "own core products within the accounts receivable space",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Cross-functional collaboration",
+          "category": "responsibility",
+          "evidence": "work closely with engineering, business, operations, data science, finance, and executive teams",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Feature market delivery",
+          "category": "responsibility",
+          "evidence": "bring features to market",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Business opportunity development",
+          "category": "responsibility",
+          "evidence": "develop and grow business opportunities for Amazon",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Analytical skills",
+          "category": "required_skill",
+          "evidence": "be highly analytical",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Matrix organization effectiveness",
+          "category": "required_skill",
+          "evidence": "work extremely effectively in a matrix organization",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Technology synthesis",
+          "category": "required_skill",
+          "evidence": "various technologies and capabilities into high-quality, simple products and applications that customers love",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Global product roadmap delivery",
+          "category": "responsibility",
+          "evidence": "define, execute, and deliver a global product roadmap",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Customer value addition",
+          "category": "responsibility",
+          "evidence": "adds significant incremental value to Amazon's customer groups",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Bachelor's degree",
+          "category": "education",
+          "evidence": "Bachelor's degree",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Roadmap strategy and definition",
+          "category": "experience",
+          "evidence": "Experience owning/driving roadmap strategy and definition",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Feature delivery and tradeoffs",
+          "category": "experience",
+          "evidence": "Experience with feature delivery and tradeoffs of a product",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Engineering discussions on technology decisions and strategy",
+          "category": "experience",
+          "evidence": "Experience contributing to engineering discussions around technology decisions and strategy related to a product",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Managing technical products or online services",
+          "category": "experience",
+          "evidence": "Experience managing technical products or online services",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Representing and advocating for critical customers and stakeholders during executive-level prioritization and planning",
+          "category": "experience",
+          "evidence": "Experience in representing and advocating for a variety of critical customers and stakeholders during executive-level prioritization and planning",
+          "requirement_level": "required"
+        },
+        {
+          "name": "Tableau",
+          "category": "preferred_skill",
+          "evidence": "Experience in using analytical tools, such as Tableau, Qlikview, QuickSight",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Qlikview",
+          "category": "preferred_skill",
+          "evidence": "Qlikview",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "QuickSight",
+          "category": "preferred_skill",
+          "evidence": "QuickSight",
+          "requirement_level": "preferred"
+        },
+        {
+          "name": "Building and driving adoption of new tools",
+          "category": "experience",
+          "evidence": "Experience in building and driving adoption of new tools",
+          "requirement_level": "preferred"
+        }
+      ],
+      "extraction_warnings": [
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Advocate for your area of focus",
+          "model_evidence": "Advocate for your area of focus",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Deliver necessary materials and communications",
+          "model_evidence": "Deliver necessary materials and communications",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Manage risks",
+          "model_evidence": "Manage risks",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Manage trade-offs",
+          "model_evidence": "Manage trade-offs",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Excellent communication",
+          "model_evidence": "Excellent communication",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Stakeholder management",
+          "model_evidence": "Stakeholder management",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Make technical scoping and trade-off decisions",
+          "model_evidence": "Make technical scoping and trade-off decisions",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Oversee deployment",
+          "model_evidence": "Oversee deployment",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Set the product strategy",
+          "model_evidence": "Set the product strategy",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Develop and prioritize new features",
+          "model_evidence": "Develop and prioritize new features",
+          "extraction_class": "job_requirement"
+        },
+        {
+          "type": "ungrounded_evidence",
+          "message": "LangExtract returned ungrounded evidence: Own and deliver high-quality products from initial visioning through deployment",
+          "model_evidence": "Own and deliver high-quality products from initial visioning through deployment",
+          "extraction_class": "job_requirement"
+        }
+      ]
+    }
+  ]
+}

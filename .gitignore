@@ -1,0 +1,22 @@
+# Local environment settings and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+.aws/
+
+# Python virtual environments
+.venv/
+venv/
+
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+
+# Test coverage output
+.coverage
+.coverage.*
+htmlcov/
+

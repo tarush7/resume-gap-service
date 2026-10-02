@@ -1,0 +1,730 @@
+LANGEXTRACT + OLLAMA PARAMETERS: A BEGINNER'S GUIDE
+====================================================
+
+Purpose of this file
+--------------------
+
+This guide explains the settings used in langextract_requirements.py.
+It assumes you are new to language models, tokens, context windows,
+chunking, and concurrency.
+
+
+1. THE BIG PICTURE
+------------------
+
+Your application follows this flow:
+
+    Job description
+          |
+          v
+    LangExtract prepares the prompt and may split the document
+          |
+          v
+    Ollama sends the prompt to qwen3.5:9b
+          |
+          v
+    The model generates structured JSON text, token by token
+          |
+          v
+    LangExtract parses and aligns the extracted evidence
+          |
+          v
+    Your application validates the result
+          |
+          v
+    FastAPI returns the response
+
+LangExtract is not the language model. It is a library that organizes the
+extraction job, calls the model, parses the answer, and connects extracted
+text back to its location in the source document.
+
+Ollama is the model server. It loads and runs qwen3.5:9b on the remote GPU.
+
+qwen3.5:9b is the language model that reads the prompt and writes the answer.
+
+
+2. IMPORTANT BEGINNER TERMS
+---------------------------
+
+Character
+    One written symbol, such as "A", "7", a space, or a comma.
+
+Token
+    A small piece of text understood by the model. A token is not exactly a
+    word. One English word may be one token or several tokens. Punctuation and
+    spaces can also affect tokenization.
+
+    A rough English estimate is:
+
+        1 token is about 3 to 4 characters
+        100 tokens is about 70 to 80 words
+
+    This estimate is only for intuition; the exact count varies.
+
+Input tokens
+    Everything the model must read: system instructions, extraction prompt,
+    few-shot examples, job title, and the job-description chunk.
+
+Output tokens
+    Everything the model writes in its response. In this project, that is the
+    JSON containing requirement names, categories, levels, and evidence.
+
+Context window
+    The model's working space. It must contain both input and generated output.
+
+Inference
+    The process of running the model to produce an answer.
+
+Chunk
+    A portion of a larger document. LangExtract may split a long job
+    description into multiple chunks and call Ollama for each chunk.
+
+Latency
+    The amount of time the user waits for a response.
+
+Throughput
+    How much work the system completes over time, such as tokens per second or
+    requests per minute.
+
+Concurrency
+    Processing multiple pieces of work at the same time.
+
+Grounded evidence
+    Evidence copied from the source job description instead of invented by the
+    model.
+
+
+3. CURRENT CONFIGURATION
+------------------------
+
+The current extraction call is conceptually:
+
+    lx.extract(
+        text_or_documents=description,
+        prompt_description=REQUIREMENT_PROMPT,
+        examples=REQUIREMENT_EXAMPLES,
+        model_id=OLLAMA_MODEL,
+        model_url=OLLAMA_BASE_URL,
+        language_model_params={
+            "timeout": 300,
+            "seed": 42,
+            "num_ctx": 8192,
+            "max_output_tokens": 4096,
+            "keep_alive": 600,
+        },
+        additional_context=f"Job title: {title}",
+        max_char_buffer=4000,
+        batch_length=1,
+        max_workers=1,
+        extraction_passes=1,
+        temperature=0.0,
+        resolver_params={
+            "suppress_parse_errors": False,
+            "enable_fuzzy_alignment": False,
+            "accept_match_lesser": False,
+        },
+        show_progress=False,
+    )
+
+
+4. QUICK REFERENCE SHEET
+------------------------
+
+Parameter                  Current value      Controls
+-------------------------  -----------------  -------------------------------
+model_id                   qwen3.5:9b         Which model performs extraction
+model_url                  Remote Ollama URL  Where the model server is
+timeout                    300 seconds        How long one call may wait
+seed                       42                 Repeatability of model choices
+num_ctx                    8192 tokens        Model working-memory size
+max_output_tokens          4096 tokens        Maximum response length
+keep_alive                 600 seconds        How long model stays loaded
+max_char_buffer            4000 characters    Approximate chunk size
+batch_length               1                  Chunks submitted in one batch
+max_workers                1                  Maximum parallel workers
+extraction_passes          1                  Times the document is extracted
+temperature                0.0                Randomness/creativity
+suppress_parse_errors      False              Whether malformed output is hidden
+enable_fuzzy_alignment     False              Whether approximate evidence matches
+accept_match_lesser        False              Whether weaker matches are accepted
+show_progress              False              Whether a progress display is printed
+
+
+5. DETAILED PARAMETER EXPLANATIONS
+----------------------------------
+
+model_id
+~~~~~~~~
+
+Current value:
+
+    qwen3.5:9b
+
+This selects the model that performs the extraction.
+
+The model affects:
+
+* extraction quality
+* speed
+* GPU memory use
+* ability to follow JSON formatting
+* ability to understand long documents
+
+A larger model is often more capable, but it usually needs more GPU memory and
+may generate more slowly. Quantization, model architecture, and hardware also
+matter, so parameter count alone does not determine speed.
+
+
+model_url
+~~~~~~~~~
+
+Current value comes from OLLAMA_BASE_URL, currently the remote Ollama server.
+
+This tells LangExtract where to send model requests. It does not control model
+quality. Network latency over a local network is normally small compared with
+the time required to generate thousands of output tokens.
+
+
+timeout
+~~~~~~~
+
+Current value:
+
+    300 seconds
+
+This is a waiting limit, not a speed control.
+
+It means approximately:
+
+    "If the model has not completed this call within 300 seconds, stop waiting
+    and report a timeout."
+
+Increasing timeout:
+
+* prevents long valid requests from failing too early
+* does not make Ollama process the request faster
+* can make users wait longer before a genuinely stuck request fails
+
+Analogy:
+
+    A timeout is how long you agree to wait for a bus. Waiting for 30 minutes
+    instead of 10 minutes does not make the bus drive faster.
+
+
+seed
+~~~~
+
+Current value:
+
+    42
+
+The seed initializes the model's random decision process. Using the same seed,
+prompt, model, and settings can make results more repeatable.
+
+However, a seed does not guarantee perfectly identical results in every
+environment. Server versions, model versions, concurrency, and implementation
+details can still affect the result.
+
+The number 42 is not special technically. It is simply a commonly used fixed
+value.
+
+
+num_ctx
+~~~~~~~
+
+Current value:
+
+    8192 tokens
+
+This is the context window requested from Ollama: the working space available
+for the input and output together.
+
+Conceptually:
+
+    prompt + examples + JD chunk + generated response <= context window
+
+If the prompt and examples use 2,000 tokens and the JD chunk uses 1,500 tokens,
+then the remaining context must also accommodate the generated output.
+
+A larger num_ctx:
+
+* allows more text to fit in one model call
+* consumes more GPU memory, especially with concurrent requests
+* does not automatically improve extraction
+* does not mean the model will generate that many tokens
+
+Do not confuse num_ctx with max_output_tokens:
+
+    num_ctx             = total working space
+    max_output_tokens   = response-length limit inside that space
+
+
+max_output_tokens
+~~~~~~~~~~~~~~~~~
+
+Current value:
+
+    4096 tokens
+
+This limits how much text the model may generate for one call.
+
+If the model reaches this limit while writing JSON, its response may end in the
+middle of an object, like this:
+
+    {
+      "name": "Stakeholder management",
+      "category": "required_skill"
+
+That is incomplete JSON, so parsing fails.
+
+Increasing this value from 2048 to 4096 gave the model enough room to finish
+the large response. But a higher limit also permits longer generation, which
+can increase latency.
+
+Important distinction:
+
+    max_output_tokens=4096 does not force 4096 tokens.
+    It only allows up to 4096 tokens.
+
+
+keep_alive
+~~~~~~~~~~
+
+Current value:
+
+    600 seconds
+
+This asks Ollama to keep the model loaded in memory for 600 seconds after use.
+
+Benefits:
+
+* the next request can avoid reloading the model
+* repeated requests usually start faster
+
+Trade-off:
+
+* GPU memory remains occupied while the model stays loaded
+
+This helps cold-start time, but it does not make token generation itself much
+faster.
+
+
+max_char_buffer
+~~~~~~~~~~~~~~~
+
+Current value:
+
+    4000 characters
+
+This tells LangExtract approximately how much source text to place in each
+chunk.
+
+For the tested job description:
+
+    JD length       = 6,147 characters
+    buffer size     = 4,000 characters
+    expected chunks = at least 2
+
+The exact split may respect sentence or text boundaries, so this is not always
+a simple mathematical cut at exactly character 4,000.
+
+Smaller chunks:
+
+* reduce the amount of JD text each call must understand
+* may make individual calls easier
+* create more model calls
+* can create duplicate requirements near related sections
+* add repeated prompt and few-shot-example overhead
+
+Larger chunks:
+
+* reduce the number of model calls
+* give the model more surrounding context
+* require more context-window capacity
+* can produce a larger JSON response in one call
+* can hit the output-token limit if too many results are requested
+
+
+batch_length
+~~~~~~~~~~~~
+
+Current value:
+
+    1
+
+This controls how many chunks LangExtract groups into a batch for processing.
+
+It is not the same as max_workers. Batching describes how work is grouped;
+workers describe how many units of work may run simultaneously.
+
+For this project, leaving batch_length at 1 is a conservative starting point.
+Changing it should be tested because model adapters may handle batches
+differently.
+
+
+max_workers
+~~~~~~~~~~~
+
+Current value:
+
+    1
+
+This allows only one extraction worker at a time.
+
+With two chunks and one worker:
+
+    chunk 1 runs -> chunk 1 finishes -> chunk 2 runs -> chunk 2 finishes
+
+If each call takes about 40 seconds, the model portion may take about:
+
+    40 + 40 = 80 seconds
+
+With two workers, the calls could be submitted concurrently. That does not
+guarantee the total becomes 40 seconds because:
+
+* there is only one GPU
+* Ollama must support the concurrent workload
+* concurrent contexts consume more GPU memory
+* two generations may compete for the same GPU compute
+* insufficient VRAM could cause slower execution or failure
+
+Therefore, max_workers should not be increased blindly on a single 16 GB GPU.
+
+
+extraction_passes
+~~~~~~~~~~~~~~~~~
+
+Current value:
+
+    1
+
+This controls how many times LangExtract performs extraction over the text.
+
+More passes can sometimes improve recall, meaning the system may find items it
+missed previously. But each extra pass causes more model work and increases
+latency and cost.
+
+Rough intuition:
+
+    1 pass = normal work
+    2 passes = potentially close to twice the inference work
+
+One pass is appropriate while performance is already a concern.
+
+
+temperature
+~~~~~~~~~~~
+
+Current value:
+
+    0.0
+
+Temperature controls randomness in token selection.
+
+Lower temperature:
+
+* is more deterministic
+* is normally better for extraction and JSON
+* reduces creative variation
+
+Higher temperature:
+
+* creates more varied responses
+* may be useful for creative writing
+* can increase formatting mistakes or inconsistent classifications
+
+For structured data extraction, 0.0 is a sensible setting.
+
+
+prompt_description
+~~~~~~~~~~~~~~~~~~
+
+Current value:
+
+    REQUIREMENT_PROMPT
+
+This is the instruction describing what the model must extract and how each
+result must be represented.
+
+The prompt strongly affects:
+
+* what counts as a requirement
+* how granular each requirement becomes
+* whether responsibilities are included
+* category and level classification
+* duplicate and irrelevant output
+* response length and latency
+
+Asking for "every explicit requirement" and asking the model to split atomic
+skills tends to increase the number of records.
+
+
+examples
+~~~~~~~~
+
+Current value:
+
+    REQUIREMENT_EXAMPLES
+
+These are few-shot examples. They demonstrate the desired input/output pattern
+instead of relying only on written instructions.
+
+Benefits:
+
+* better formatting
+* clearer category behavior
+* improved evidence grounding
+* more consistent output
+
+Trade-offs:
+
+* examples consume input tokens in every model call
+* many or long examples increase prompt-processing work
+* examples can accidentally teach unwanted extraction behavior
+
+Examples should be short, correct, and representative.
+
+
+additional_context
+~~~~~~~~~~~~~~~~~~
+
+Current value:
+
+    Job title: <the job title>
+
+This provides useful information that is not itself the main source document.
+The title can help the model understand the role, but extracted evidence must
+still come from the job description.
+
+
+text_or_documents
+~~~~~~~~~~~~~~~~~
+
+Current value:
+
+    description
+
+This is the source text from which evidence is extracted. In this project, it
+is the job description fetched from the database or supplied in the request.
+
+
+resolver_params
+~~~~~~~~~~~~~~~
+
+The resolver connects model-produced extraction text to positions in the
+original source.
+
+suppress_parse_errors=False
+    Do not hide malformed model output. A bad JSON response becomes an error.
+    This is safer because the application does not silently return partial or
+    corrupted results.
+
+enable_fuzzy_alignment=False
+    Do not use approximate text matching when aligning evidence. Evidence must
+    be exact enough to align normally or pass the application's exact-substring
+    fallback.
+
+accept_match_lesser=False
+    Do not accept weaker, lower-quality alignment candidates. This favors data
+    integrity over permissive extraction.
+
+These strict settings can produce more visible errors, but visible errors are
+usually better than silently storing invented evidence.
+
+
+show_progress
+~~~~~~~~~~~~~
+
+Current value:
+
+    False
+
+This only controls whether LangExtract displays progress information. It does
+not materially change extraction speed or quality.
+
+
+6. WHY THE TEST TOOK 91 SECONDS
+-------------------------------
+
+Observed facts:
+
+    JD length                  6,147 characters
+    max_char_buffer            4,000 characters
+    likely model calls         at least 2
+    max_workers                1
+    extraction_passes          1
+    returned requirements      60
+    observed request duration  about 91 seconds
+
+Simplified timeline:
+
+    Fetch job from database
+              |
+              v
+    Prepare prompt and chunk the JD
+              |
+              v
+    Ollama call for chunk 1: read prompt + generate JSON
+              |
+              v
+    Ollama call for chunk 2: read prompt + generate JSON
+              |
+              v
+    Parse, align, merge, validate, and return 60 records
+
+The largest cost is normally model generation. The model writes one token at a
+time, and 60 JSON objects require many output tokens. Because max_workers is 1,
+the second chunk waits for the first.
+
+The database fetch, Python validation, and local-network transfer are normally
+small compared with generating thousands of tokens, although proper timing
+instrumentation should be added before treating this as proven for every call.
+
+
+7. PARAMETERS THAT ARE COMMONLY CONFUSED
+----------------------------------------
+
+timeout versus speed
+    Timeout controls how long the client waits. It does not increase speed.
+
+num_ctx versus max_output_tokens
+    num_ctx is total working space. max_output_tokens limits generated output.
+
+max_char_buffer versus num_ctx
+    max_char_buffer is a character-based LangExtract chunking control. num_ctx
+    is a token-based model context limit.
+
+batch_length versus max_workers
+    batch_length groups work. max_workers controls parallel execution.
+
+seed versus temperature
+    Temperature controls randomness. Seed initializes random choices. Low
+    temperature plus a fixed seed generally improves repeatability.
+
+keep_alive versus timeout
+    keep_alive controls how long the model stays loaded after a request.
+    timeout controls how long the client waits for a request to finish.
+
+
+8. SAFE TUNING PRINCIPLES
+-------------------------
+
+Change one important setting at a time
+    If five settings are changed together, you will not know which change
+    improved or damaged the result.
+
+Measure quality and latency together
+    A faster extractor is not useful if it misses important qualifications.
+    A perfect extractor may still be unsuitable for an interactive endpoint if
+    every request takes 90 seconds.
+
+Test several different JDs
+    One job description cannot represent all lengths, formats, sources, and
+    requirement styles.
+
+Keep strict evidence validation
+    Performance improvements should not allow invented evidence into the
+    database.
+
+Do not solve latency only by increasing timeout
+    A higher timeout prevents early failure but does not reduce work.
+
+
+9. A PRACTICAL EXPERIMENT PLAN
+------------------------------
+
+Create a small evaluation set containing:
+
+* a short JD
+* a medium JD
+* a long JD
+* a JD with clear headings and bullets
+* a poorly formatted JD
+* a JD with required and preferred qualifications
+
+For each run, record:
+
+* JD character count
+* total duration
+* number of model calls/chunks
+* input and output token counts, when available
+* number of extracted requirements
+* duplicate count
+* missed important requirements
+* incorrect categories or levels
+* ungrounded-evidence failures
+* malformed-JSON failures
+
+Then compare configurations instead of guessing.
+
+
+10. POSSIBLE NEXT CONFIGURATION TO TEST
+---------------------------------------
+
+For normal job descriptions under about 10,000 characters, one experiment is:
+
+    max_char_buffer=12000
+    max_workers=1
+    extraction_passes=1
+    temperature=0.0
+    num_ctx=8192
+    max_output_tokens=4096
+
+Goal:
+
+* process many JDs in one model call instead of two or three
+* avoid simultaneous workloads on the single GPU
+* preserve deterministic extraction
+
+Risk:
+
+* one call may produce a very large response
+* input plus output may approach the 8192-token context limit
+* malformed or truncated JSON can return if too many records are requested
+
+Therefore, this should be measured rather than assumed to be better.
+
+The prompt should also discourage duplicate and unnecessarily granular records.
+Reducing 60 records to a smaller set of meaningful, non-duplicated requirements
+can improve both usefulness and latency.
+
+
+11. SIMPLE MENTAL MODEL
+-----------------------
+
+Think of the model as a student completing an assignment:
+
+    prompt_description = assignment instructions
+    examples           = solved sample questions
+    description        = source textbook page
+    max_char_buffer    = pages given per assignment
+    num_ctx            = size of the student's desk
+    max_output_tokens  = maximum answer-sheet length
+    temperature        = freedom to improvise
+    seed               = repeatable starting condition
+    timeout            = how long the teacher will wait
+    max_workers        = number of students working simultaneously
+    extraction_passes  = how many times the assignment is repeated
+    keep_alive         = how long the student remains ready for more work
+
+If the answer requires writing 60 structured records across two assignments,
+it will take longer than writing 20 records in one assignment—even when the
+student is fast.
+
+
+12. FINAL TAKEAWAY
+------------------
+
+The 91-second result does not mean the GPU is necessarily malfunctioning.
+The current workflow likely makes multiple sequential model calls and asks the
+model to generate a large structured response containing 60 requirements.
+
+The most important performance levers are:
+
+1. Number of model calls created by chunking.
+2. Number and size of generated requirement records.
+3. Output-token limit and actual generated token count.
+4. Whether calls run sequentially or concurrently.
+5. Model size, quantization, and GPU generation speed.
+
+Measure these separately before choosing the final production settings.
