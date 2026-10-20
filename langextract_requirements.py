@@ -1,13 +1,36 @@
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+from collections.abc import Callable
+from dataclasses import dataclass, field
 from typing import Any
 
 import langextract as lx
 from langextract.exceptions import LangExtractError
 
 LANGEXTRACT_PROMPT_VERSION = "job_requirements_langextract_v6_1"
+CLEANUP_VERSION = "meaning_preserving_v1"
+MODEL_PARAMETERS = {
+    "timeout": 300,
+    "seed": 42,
+    "num_ctx": 8192,
+    "max_output_tokens": 4096,
+    "keep_alive": 600,
+}
+EXTRACTION_PARAMETERS = {
+    "max_char_buffer": 3000,
+    "batch_length": 1,
+    "max_workers": 1,
+    "extraction_passes": 1,
+    "temperature": 0.0,
+    "resolver_params": {
+        "suppress_parse_errors": False,
+        "enable_fuzzy_alignment": True,
+        "fuzzy_alignment_threshold": 0.90,
+        "fuzzy_alignment_min_density": 0.60,
+        "accept_match_lesser": False,
+    },
+}
 
 REQUIREMENT_PROMPT = """
 Extract every explicit job requirement from the job description.
@@ -314,34 +337,13 @@ IGNORED_BOILERPLATE_HEADINGS = {
     "disclaimer",
 }
 
-FORMAL_EDUCATION_TERMS = {
-    "academic qualification",
-    "bachelor",
-    "college",
-    "degree",
-    "diploma",
-    "doctorate",
-    "education",
-    "master",
-    "mba",
-    "phd",
-    "university",
-}
-
-FORMAL_EDUCATION_CREDENTIAL_TERMS = {
-    "academic qualification",
-    "bachelor",
-    "degree",
-    "diploma",
-    "doctorate",
-    "master",
-    "mba",
-    "phd",
-}
-
 
 class LangExtractRequirementError(RuntimeError):
     """Raised when LangExtract cannot produce safe requirement records."""
+
+    def __init__(self, message: str, outcome=None):
+        super().__init__(message)
+        self.outcome = outcome
 
 
 @dataclass
@@ -350,6 +352,9 @@ class RequirementExtractionOutcome:
 
     records: list[dict[str, str]]
     warnings: list[dict[str, Any]]
+    raw_extractions: list[dict[str, Any]] = field(default_factory=list)
+    pre_cleanup_records: list[dict[str, str]] = field(default_factory=list)
+    events: list[dict[str, Any]] = field(default_factory=list)
 
 
 def _normalize_heading(line: str) -> str:
@@ -457,40 +462,69 @@ def clean_requirement_records(
     records: list[dict[str, str]],
     source_text: str,
     responsibility_section: str | None,
+    *,
+    events: list[dict[str, Any]] | None = None,
+    filter_policy: str = "legacy",
+    source_intervals: list[tuple[int, int] | None] | None = None,
 ) -> list[dict[str, str]]:
-    """Apply deterministic section and classification quality rules."""
+    """Preserve model meaning; audit the legacy filter or retain for review.
+
+    An aligned source occurrence takes precedence. Unaligned repeated evidence
+    is retained if any occurrence is outside an ignored section.
+    """
+    if filter_policy not in {"legacy", "review"}:
+        raise ValueError("filter_policy must be legacy or review")
     ignored_ranges = find_ignored_boilerplate_ranges(source_text)
     cleaned_records: list[dict[str, str]] = []
 
-    for original_record in records:
+    for index, original_record in enumerate(records):
         record = dict(original_record)
         evidence = record["evidence"]
-
-        if any(
-            source_text.find(evidence, start_pos, end_pos) != -1
-            for start_pos, end_pos in ignored_ranges
-        ):
-            continue
-
-        if responsibility_section is not None and evidence in responsibility_section:
-            record["category"] = "responsibility"
-            record["requirement_level"] = "required"
-        elif record["category"] in {"required_skill", "preferred_skill"} and any(
-            term in f"{record['name']} {evidence}".lower()
-            for term in FORMAL_EDUCATION_CREDENTIAL_TERMS
-        ):
-            record["category"] = "education"
-        elif (
-            record["category"] == "education"
-            and "technical background" in evidence.lower()
-            and not any(term in evidence.lower() for term in FORMAL_EDUCATION_TERMS)
-        ):
-            record["category"] = (
-                "preferred_skill"
-                if record["requirement_level"] == "preferred"
-                else "required_skill"
+        if source_intervals is not None and source_intervals[index] is not None:
+            occurrences = [source_intervals[index]]
+        else:
+            occurrences = (
+                [
+                    (match.start(), match.start() + len(evidence))
+                    for match in re.finditer(f"(?={re.escape(evidence)})", source_text)
+                ]
+                if evidence
+                else []
             )
-
+        matches = [
+            (start, end)
+            for start, end in ignored_ranges
+            if any(start <= left and right <= end for left, right in occurrences)
+        ]
+        fully_ignored = bool(occurrences) and all(
+            any(start <= left and right <= end for start, end in ignored_ranges)
+            for left, right in occurrences
+        )
+        if matches:
+            action = (
+                "filtered" if fully_ignored and filter_policy == "legacy" else "review"
+            )
+            if events is not None:
+                events.append(
+                    {
+                        "type": "boilerplate_section",
+                        "action": action,
+                        "record": dict(original_record),
+                        "evidence": evidence,
+                        "source_occurrences": occurrences,
+                        "matched_sections": [
+                            {
+                                "heading": source_text[:start].splitlines()[-1],
+                                "start_pos": start,
+                                "end_pos": end,
+                            }
+                            for start, end in matches
+                        ],
+                        "reason": "Evidence occurs under a legacy ignored heading; relevance needs review",
+                    }
+                )
+            if action == "filtered":
+                continue
         cleaned_records.append(record)
 
     return cleaned_records
@@ -560,6 +594,16 @@ def _rejected_extraction_warning(
         "message": message,
         "extraction_class": extraction.extraction_class,
         "model_evidence": extraction.extraction_text,
+        "attributes": extraction.attributes,
+        "char_interval": (
+            {
+                "start_pos": extraction.char_interval.start_pos,
+                "end_pos": extraction.char_interval.end_pos,
+            }
+            if extraction.char_interval
+            else None
+        ),
+        "action": "rejected",
     }
 
 
@@ -570,8 +614,24 @@ def requirement_records_from_document_with_warnings(
     """Convert grounded items and report invalid items without hiding them."""
     records: list[dict[str, str]] = []
     warnings: list[dict[str, Any]] = []
+    raw_extractions: list[dict[str, Any]] = []
+    events: list[dict[str, Any]] = []
 
     for extraction in document.extractions or []:
+        interval = extraction.char_interval
+        raw_extractions.append(
+            {
+                "extraction_class": extraction.extraction_class,
+                "extraction_text": extraction.extraction_text,
+                "attributes": extraction.attributes,
+                "char_interval": (
+                    {"start_pos": interval.start_pos, "end_pos": interval.end_pos}
+                    if interval is not None
+                    else None
+                ),
+                "source_text": source_text,
+            }
+        )
         if extraction.extraction_class != "job_requirement":
             message = (
                 "LangExtract returned an unexpected extraction class: "
@@ -650,8 +710,40 @@ def requirement_records_from_document_with_warnings(
             continue
 
         records.append(record)
+        events.append(
+            {
+                "type": "grounded_record",
+                "action": "grounded",
+                "record": dict(record),
+                "start_pos": start_pos,
+                "end_pos": end_pos,
+                "aligned": interval is not None
+                and interval.start_pos is not None
+                and interval.end_pos is not None,
+                "raw_index": len(raw_extractions) - 1,
+                "source_text": source_text,
+            }
+        )
+        if evidence != extraction.extraction_text:
+            events.append(
+                {
+                    "type": "evidence_recovery",
+                    "action": "recovered",
+                    "model_evidence": extraction.extraction_text,
+                    "evidence": evidence,
+                    "record": dict(record),
+                    "start_pos": start_pos,
+                    "end_pos": end_pos,
+                }
+            )
 
-    return RequirementExtractionOutcome(records=records, warnings=warnings)
+    return RequirementExtractionOutcome(
+        records=records,
+        warnings=warnings,
+        raw_extractions=raw_extractions,
+        pre_cleanup_records=[dict(record) for record in records],
+        events=events,
+    )
 
 
 def requirement_records_from_document(
@@ -690,26 +782,9 @@ def _run_langextract(
             examples=examples,
             model_id=model_id,
             model_url=model_url,
-            language_model_params={
-                "timeout": 300,
-                "seed": 42,
-                "num_ctx": 8192,
-                "max_output_tokens": 4096,
-                "keep_alive": 600,
-            },
+            language_model_params=MODEL_PARAMETERS,
             additional_context=f"Job title: {title}. {context_label}",
-            max_char_buffer=3000,
-            batch_length=1,
-            max_workers=1,
-            extraction_passes=1,
-            temperature=0.0,
-            resolver_params={
-                "suppress_parse_errors": False,
-                "enable_fuzzy_alignment": True,
-                "fuzzy_alignment_threshold": 0.90,
-                "fuzzy_alignment_min_density": 0.60,
-                "accept_match_lesser": False,
-            },
+            **EXTRACTION_PARAMETERS,
             show_progress=False,
         )
     except LangExtractError as error:
@@ -750,9 +825,12 @@ def extract_requirement_records_with_warnings(
     description: str,
     model_id: str,
     model_url: str,
+    filter_policy: str = "legacy",
+    _document_runner: Callable[..., lx.data.AnnotatedDocument] | None = None,
 ) -> RequirementExtractionOutcome:
     """Extract grounded records while retaining rejected items as warnings."""
-    document = _run_langextract(
+    run_document = _document_runner or _run_langextract
+    document = run_document(
         text=description,
         prompt=REQUIREMENT_PROMPT,
         examples=REQUIREMENT_EXAMPLES,
@@ -762,27 +840,41 @@ def extract_requirement_records_with_warnings(
         context_label="Full job requirement extraction",
     )
     outcome = requirement_records_from_document_with_warnings(document, description)
+    for raw in outcome.raw_extractions:
+        raw["context_label"] = "Full job requirement extraction"
 
     if not outcome.records:
         if outcome.warnings:
             raise LangExtractRequirementError(
                 "LangExtract did not produce any valid grounded requirements. "
-                f"First rejection: {outcome.warnings[0]['message']}"
+                f"First rejection: {outcome.warnings[0]['message']}",
+                outcome,
             )
         raise LangExtractRequirementError(
-            "LangExtract did not extract any job requirements"
+            "LangExtract did not extract any job requirements", outcome
         )
 
     responsibility_section = find_responsibility_section(description)
+    # Only aligned spans identify a unique occurrence. Unaligned exact matches
+    # are checked across all occurrences by cleanup.
+    aligned = [event for event in outcome.events if event["action"] == "grounded"]
     outcome.records = clean_requirement_records(
         outcome.records,
         description,
         responsibility_section,
+        events=outcome.events,
+        filter_policy=filter_policy,
+        source_intervals=(
+            [
+                (event["start_pos"], event["end_pos"]) if event["aligned"] else None
+                for event in aligned
+            ]
+        ),
     )
 
     if not outcome.records:
         raise LangExtractRequirementError(
-            "LangExtract did not retain any job requirements after filtering"
+            "LangExtract did not retain any job requirements after filtering", outcome
         )
 
     if responsibility_section is None or has_grounded_responsibility(
@@ -790,19 +882,43 @@ def extract_requirement_records_with_warnings(
     ):
         return outcome
 
-    responsibility_document = _run_langextract(
-        text=responsibility_section,
-        prompt=RESPONSIBILITY_PROMPT,
-        examples=RESPONSIBILITY_EXAMPLES,
-        title=title,
-        model_id=model_id,
-        model_url=model_url,
-        context_label="Responsibility-only retry",
-    )
+    try:
+        responsibility_document = run_document(
+            text=responsibility_section,
+            prompt=RESPONSIBILITY_PROMPT,
+            examples=RESPONSIBILITY_EXAMPLES,
+            title=title,
+            model_id=model_id,
+            model_url=model_url,
+            context_label="Responsibility-only retry",
+        )
+    except Exception as error:
+        raise LangExtractRequirementError(str(error), outcome) from error
     responsibility_outcome = requirement_records_from_document_with_warnings(
         responsibility_document, responsibility_section
     )
+    for raw in responsibility_outcome.raw_extractions:
+        raw["context_label"] = "Responsibility-only retry"
+    retry_spans = [
+        event
+        for event in responsibility_outcome.events
+        if event["action"] == "grounded"
+    ]
+    responsibility_outcome.records = clean_requirement_records(
+        responsibility_outcome.records,
+        responsibility_section,
+        None,
+        events=responsibility_outcome.events,
+        filter_policy=filter_policy,
+        source_intervals=[
+            (event["start_pos"], event["end_pos"]) if event["aligned"] else None
+            for event in retry_spans
+        ],
+    )
     outcome.warnings.extend(responsibility_outcome.warnings)
+    outcome.raw_extractions.extend(responsibility_outcome.raw_extractions)
+    outcome.pre_cleanup_records.extend(responsibility_outcome.pre_cleanup_records)
+    outcome.events.extend(responsibility_outcome.events)
 
     if not has_grounded_responsibility(
         responsibility_outcome.records,
@@ -810,14 +926,24 @@ def extract_requirement_records_with_warnings(
     ):
         raise LangExtractRequirementError(
             "LangExtract omitted responsibilities from an explicitly headed "
-            "role/responsibility section after a focused retry"
+            "role/responsibility section after a focused retry",
+            outcome,
         )
 
+    primary_names = {record["name"].strip().lower() for record in outcome.records}
     outcome.records = _merge_requirement_records(
         outcome.records,
         responsibility_outcome.records,
         description,
     )
+    seen = primary_names
+    for record in responsibility_outcome.records:
+        name = record["name"].strip().lower()
+        if name in seen:
+            outcome.events.append(
+                {"type": "retry_duplicate", "action": "merged", "record": record}
+            )
+        seen.add(name)
     return outcome
 
 
@@ -837,6 +963,11 @@ def extract_requirement_records(
     )
 
     if outcome.warnings:
-        raise LangExtractRequirementError(outcome.warnings[0]["message"])
+        raise LangExtractRequirementError(outcome.warnings[0]["message"], outcome)
+    if any(event["action"] in {"filtered", "review"} for event in outcome.events):
+        raise LangExtractRequirementError(
+            "Boilerplate-section items require review before strict API acceptance",
+            outcome,
+        )
 
     return outcome.records

@@ -1,0 +1,620 @@
+[
+  {
+    "job_id": "250d4712-ae4c-4536-8a9a-f119cb0c5247",
+    "job_title": "Technology Product Manager AI & Data Strategy",
+    "accepted_classifications_preserved_from_pre_cleanup": true,
+    "same_name_and_evidence_matches": 68,
+    "category_changes": [
+      {
+        "name": "Agile environment work",
+        "evidence": "Work in an agile environment (Scrum/ release ceremonies)",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "JIRA",
+        "evidence": "JIRA",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "8+ Years of Demonstrated experience in Product Management and/or Product Development discipline",
+        "evidence": "8+ Years of Demonstrated experience in Product Management and/or Product Development discipline",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "experience",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Finance background",
+        "evidence": "Finance background",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "experience",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Experience with Data pipelines",
+        "evidence": "Experience with Data pipelines",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Strong understanding of Finance processes",
+        "evidence": "Strong understanding of Finance processes",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Strong understanding of data flows",
+        "evidence": "Strong understanding of Finance processes and data flows",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Ability to interpret financial data",
+        "evidence": "ability to interpret financial data",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Financial products and asset classes familiarity",
+        "evidence": "Familiarity with Financial products and asset classes",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Transaction flow understanding",
+        "evidence": "of how transactions flow from source product systems to financial reporting",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Agentic AI/ML knowledge",
+        "evidence": "Strong working knowledge of Agentic AI/ML",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "AI vs traditional automation assessment",
+        "evidence": "Ability to critically assess where AI adds value vs, where traditional rule-based",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Data analysis experience",
+        "evidence": "Strong experience and background with Data analysis",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "SQL",
+        "evidence": "Basic, SQL",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "preferred_skill",
+          "requirement_level": "preferred"
+        }
+      },
+      {
+        "name": "Python",
+        "evidence": "Python",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "preferred_skill",
+          "requirement_level": "preferred"
+        }
+      },
+      {
+        "name": "Problem translation to AI/automation opportunities",
+        "evidence": "Proven ability to translate ambiguous business problems into structured AI and automation opportunities",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Analytical thinking and problem resolution",
+        "evidence": "Ability to apply ingenuity, creativity and analytical thinking to problem analysis and resolution",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Stakeholder consensus building and communication",
+        "evidence": "Build consensus and communicate the value proposition to key partners and stakeholders",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Critical questioning and process challenge",
+        "evidence": "ask right questions and challenge current ways of working",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Root cause identification",
+        "evidence": "identify root-cause of problems",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Self-motivation",
+        "evidence": "Highly self-motivated",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Decision management",
+        "evidence": "decision management skills",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Agile adaptability and learning",
+        "evidence": "willingness to learn and adapt in an agile environment",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      }
+    ],
+    "recovered_items": 24,
+    "raw_passes": {
+      "Full job requirement extraction": 106
+    },
+    "ungrounded_case_only_matches": [],
+    "ungrounded_case_and_whitespace_matches": []
+  },
+  {
+    "job_id": "3c99f3df-e8c4-43b2-90a1-acae5fdb1f0d",
+    "job_title": "Staff Technical Program Manager",
+    "accepted_classifications_preserved_from_pre_cleanup": true,
+    "same_name_and_evidence_matches": 42,
+    "category_changes": [
+      {
+        "name": "Understand system design",
+        "evidence": "understand system design",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Develop technical fluency across Kaseya's SaaS platforms",
+        "evidence": "Develop technical fluency across Kaseya's SaaS platforms",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "APIs",
+        "evidence": "APIs",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Data knowledge",
+        "evidence": "data",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      }
+    ],
+    "recovered_items": 4,
+    "raw_passes": {
+      "Full job requirement extraction": 85
+    },
+    "ungrounded_case_only_matches": [],
+    "ungrounded_case_and_whitespace_matches": []
+  },
+  {
+    "job_id": "682c86cd-4d30-45c0-8ee4-9c5c3479573e",
+    "job_title": "Principal Product Manager – Agentic AI Platform",
+    "accepted_classifications_preserved_from_pre_cleanup": true,
+    "same_name_and_evidence_matches": 36,
+    "category_changes": [
+      {
+        "name": "15+ years of product management experience",
+        "evidence": "15+ years of product management experience, including owning and driving large-scale technology platforms, AI products, developer-facing products, or enterprise SaaS capabilities across multiple lifecycle stages",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "experience",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Understanding of AI, LLMs, agents, tools, workflows, automation, and orchestration",
+        "evidence": "Strong understanding of how AI, LLMs, agents, tools, workflows, automation, and orchestration can be applied to enterprise SaaS products",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Ability to define AI for meaningful tasks and business outcomes",
+        "evidence": "Ability to think beyond chatbot experiences and define how AI can help users complete meaningful tasks and business outcomes",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Familiarity with AI evaluation methods",
+        "evidence": "Familiarity with AI evaluation methods such as golden datasets, test suites, trace analysis, human review, LLM-as-a-judge, regression testing, and production monitoring",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Awareness of AI risks",
+        "evidence": "Strong awareness of AI risks around accuracy, privacy, security, explainability, permissions, and compliance",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Deep familiarity with cloud platforms, SaaS, microservices, serverless, event-driven architectures, API-first design, data integrations, and modern enterprise architecture",
+        "evidence": "Deep familiarity with cloud platforms, SaaS business models, microservices, serverless computing, event-driven architectures, API-first design, data integrations, and modern enterprise architecture",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Ability to translate technical possibilities into product outcomes",
+        "evidence": "Ability to translate technical possibilities into product outcomes",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Strong platform mindset with experience creating reusable capabilities",
+        "evidence": "Strong platform mindset with experience creating reusable capabilities, standards, interfaces, and services that support multiple product teams and business use cases",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Ability to build platform services with empathy for developers",
+        "evidence": "Ability to build platform services with empathy for developers, including onboarding, authentication, documentation, observability, service discoverability, and lifecycle needs",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Prior experience with Internal Developer Portals such as Backstage",
+        "evidence": "Prior experience with Internal Developer Portals such as Backstage",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "preferred_skill",
+          "requirement_level": "preferred"
+        }
+      },
+      {
+        "name": "Experience with authentication, authorization, role-based access, policy-based access, API security, OpenAPI, or platform security workflows",
+        "evidence": "Experience with authentication, authorization, role-based access, policy-based access, API security, OpenAPI, or platform security workflows",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Internal stakeholder collaboration",
+        "evidence": "Internal Stakeholder Collaboration",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Requirement prioritization",
+        "evidence": "Prioritization and Decision-Making",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Product ownership",
+        "evidence": "Execution Rigor",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Communication",
+        "evidence": "Effective Communication",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "PRD creation",
+        "evidence": "Documentation and Requirements",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Strategic thinking",
+        "evidence": "Strategic and Analytical Thinking",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "KPI definition and tracking",
+        "evidence": "Data-Driven Approach",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Agile and Scrum methodologies",
+        "evidence": "Agile Methodologies",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "required_skill",
+          "requirement_level": "required"
+        }
+      },
+      {
+        "name": "Degree in Computer Science, Engineering, Data Science, or related field",
+        "evidence": "Educational Background",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "education",
+          "requirement_level": "preferred"
+        }
+      },
+      {
+        "name": "M.S. or MBA",
+        "evidence": "Advanced degrees",
+        "before": {
+          "category": "responsibility",
+          "requirement_level": "required"
+        },
+        "after": {
+          "category": "education",
+          "requirement_level": "preferred"
+        }
+      }
+    ],
+    "recovered_items": 3,
+    "raw_passes": {
+      "Full job requirement extraction": 36
+    },
+    "ungrounded_case_only_matches": [],
+    "ungrounded_case_and_whitespace_matches": []
+  }
+]

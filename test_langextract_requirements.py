@@ -222,7 +222,7 @@ Company description.
         ]
         cleaned = clean_requirement_records(records, source, section)
 
-        self.assertEqual(cleaned[0]["category"], "responsibility")
+        self.assertEqual(cleaned[0]["category"], "required_skill")
         self.assertEqual(cleaned[1]["category"], "required_skill")
 
     def test_responsibility_must_be_grounded_in_role_section(self):
@@ -266,7 +266,7 @@ Corporate Security Responsibility
             [records[0]],
         )
 
-    def test_role_section_controls_responsibility_category(self):
+    def test_role_section_preserves_model_category(self):
         source = """Role
 - Exhibit expertise and coordinate with interdependent teams.
 
@@ -287,9 +287,9 @@ All About You
 
         cleaned = clean_requirement_records(records, source, section)
 
-        self.assertEqual(cleaned[0]["category"], "responsibility")
+        self.assertEqual(cleaned[0]["category"], "required_skill")
 
-    def test_technical_background_is_not_formal_education(self):
+    def test_technical_background_preserves_model_classification(self):
         source = "Technical background (e.g., Computer Science) a plus."
         records = [
             {
@@ -302,9 +302,9 @@ All About You
 
         cleaned = clean_requirement_records(records, source, None)
 
-        self.assertEqual(cleaned[0]["category"], "preferred_skill")
+        self.assertEqual(cleaned[0]["category"], "education")
 
-    def test_advanced_degree_is_normalized_to_education(self):
+    def test_degree_cleanup_preserves_model_classification(self):
         source = "An advanced degree is helpful."
         records = [
             {
@@ -317,7 +317,7 @@ All About You
 
         cleaned = clean_requirement_records(records, source, None)
 
-        self.assertEqual(cleaned[0]["category"], "education")
+        self.assertEqual(cleaned[0]["category"], "preferred_skill")
         self.assertEqual(cleaned[0]["requirement_level"], "preferred")
 
     @patch("langextract_requirements.lx.extract")

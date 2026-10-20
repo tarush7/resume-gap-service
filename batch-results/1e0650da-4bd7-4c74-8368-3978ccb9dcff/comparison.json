@@ -1,0 +1,131 @@
+{
+  "complete": false,
+  "batch_id": "1e0650da-4bd7-4c74-8368-3978ccb9dcff",
+  "checks": {
+    "all_five_job_ids_present": false,
+    "one_attempt_per_job": false,
+    "production_requirement_count_unchanged": true,
+    "baseline_audit_fields_unchanged": true,
+    "production_saving_disabled": false,
+    "jd_hashes_match_preflight": true
+  },
+  "counts_after": {
+    "jobs_aggregate": {
+      "aggregate": {
+        "count": 131
+      }
+    },
+    "job_requirements_aggregate": {
+      "aggregate": {
+        "count": 125
+      }
+    },
+    "job_requirement_extraction_audits_aggregate": {
+      "aggregate": {
+        "count": 243
+      }
+    }
+  },
+  "rows": [
+    {
+      "job_id": "250d4712-ae4c-4536-8a9a-f119cb0c5247",
+      "job_title": "Technology Product Manager AI & Data Strategy",
+      "company": "Citi",
+      "before_status": "succeeded_with_warnings",
+      "after_status": "succeeded_with_warnings",
+      "before_accepted": 68,
+      "after_accepted": 68,
+      "before_rejected": 38,
+      "after_rejected": 38,
+      "raw_items": 106,
+      "filtered": 0,
+      "merged_duplicates": 0,
+      "ungrounded_items": 38,
+      "structural_rejections": 0,
+      "failure_stage": null,
+      "failure_kind": null,
+      "duration_ms": 218978,
+      "requirements_saved": 0,
+      "review_events": 0,
+      "warning_types": {
+        "ungrounded_evidence": 38
+      },
+      "category_level_conflicts": 0,
+      "error_message": null
+    },
+    {
+      "job_id": "3c99f3df-e8c4-43b2-90a1-acae5fdb1f0d",
+      "job_title": "Staff Technical Program Manager",
+      "company": "Kaseya",
+      "before_status": "succeeded_with_warnings",
+      "after_status": "succeeded_with_warnings",
+      "before_accepted": 42,
+      "after_accepted": 42,
+      "before_rejected": 43,
+      "after_rejected": 43,
+      "raw_items": 85,
+      "filtered": 0,
+      "merged_duplicates": 0,
+      "ungrounded_items": 43,
+      "structural_rejections": 0,
+      "failure_stage": null,
+      "failure_kind": null,
+      "duration_ms": 228501,
+      "requirements_saved": 0,
+      "review_events": 0,
+      "warning_types": {
+        "ungrounded_evidence": 43
+      },
+      "category_level_conflicts": 0,
+      "error_message": null
+    },
+    {
+      "job_id": "682c86cd-4d30-45c0-8ee4-9c5c3479573e",
+      "job_title": "Principal Product Manager – Agentic AI Platform",
+      "company": "G-P",
+      "before_status": "succeeded",
+      "after_status": "succeeded",
+      "before_accepted": 36,
+      "after_accepted": 36,
+      "before_rejected": 0,
+      "after_rejected": 0,
+      "raw_items": 36,
+      "filtered": 0,
+      "merged_duplicates": 0,
+      "ungrounded_items": 0,
+      "structural_rejections": 0,
+      "failure_stage": null,
+      "failure_kind": null,
+      "duration_ms": 129740,
+      "requirements_saved": 0,
+      "review_events": 0,
+      "warning_types": {},
+      "category_level_conflicts": 0,
+      "error_message": null
+    },
+    {
+      "job_id": "a6dad872-d2c9-406f-9b3f-ce9c07664aec",
+      "job_title": "Solution Category Owner – Consultation Solutions",
+      "company": "ZEISS Group",
+      "before_status": "failed",
+      "after_status": "running",
+      "before_accepted": null,
+      "after_accepted": null,
+      "before_rejected": 0,
+      "after_rejected": 0,
+      "raw_items": null,
+      "filtered": 0,
+      "merged_duplicates": null,
+      "ungrounded_items": null,
+      "structural_rejections": null,
+      "failure_stage": null,
+      "failure_kind": null,
+      "duration_ms": null,
+      "requirements_saved": null,
+      "review_events": 0,
+      "warning_types": {},
+      "category_level_conflicts": 0,
+      "error_message": null
+    }
+  ]
+}

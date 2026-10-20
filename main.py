@@ -427,14 +427,6 @@ def validate_job_requirements(
 ) -> JobRequirements:
     """Apply deterministic validation shared by every extraction backend."""
     seen_names = set()
-    education_terms = {
-        "bachelor",
-        "bachelor's",
-        "master",
-        "master's",
-        "mba",
-        "degree",
-    }
 
     for requirement in requirements.requirements:
         if "..." in requirement.evidence or "…" in requirement.evidence:
@@ -462,21 +454,22 @@ def validate_job_requirements(
         requirement.evidence = exact_evidence
         normalized_requirement_name = requirement.name.strip().lower()
 
-        if any(
-            term in normalized_requirement_name for term in education_terms
-        ) and requirement.category in {"required_skill", "preferred_skill"}:
+        expected_level = {
+            "required_skill": "required",
+            "preferred_skill": "preferred",
+        }.get(requirement.category)
+        if (
+            expected_level is not None
+            and requirement.requirement_level != expected_level
+        ):
             raise HTTPException(
                 status_code=502,
-                detail=(
-                    "Education was incorrectly categorized as a skill: "
-                    f"{requirement.name}"
-                ),
+                detail={
+                    "type": "inconsistent_category_level",
+                    "message": "Skill category and requirement level need review",
+                    "record": requirement.model_dump(mode="json"),
+                },
             )
-
-        if requirement.category == "required_skill":
-            requirement.requirement_level = "required"
-        elif requirement.category == "preferred_skill":
-            requirement.requirement_level = "preferred"
 
         if normalized_requirement_name in seen_names:
             raise HTTPException(
@@ -701,7 +694,20 @@ def extract_requirements_with_langextract(job: JobInput) -> JobRequirements:
             model_url=OLLAMA_BASE_URL,
         )
     except LangExtractRequirementError as error:
-        raise HTTPException(status_code=502, detail=str(error)) from error
+        raise HTTPException(
+            status_code=502,
+            detail={
+                "message": str(error),
+                "warnings": error.outcome.warnings if error.outcome else [],
+                "review_events": [
+                    event
+                    for event in error.outcome.events
+                    if event["action"] in {"filtered", "review"}
+                ]
+                if error.outcome
+                else [],
+            },
+        ) from error
 
     try:
         requirements = JobRequirements.model_validate({"requirements": records})
