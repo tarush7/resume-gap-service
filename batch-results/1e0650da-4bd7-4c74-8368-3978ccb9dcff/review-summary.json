@@ -1,0 +1,11 @@
+{
+  "jobs_with_captured_raw_output": 4,
+  "raw_returned_items_from_those_jobs": 319,
+  "accepted_items": 238,
+  "ungrounded_items": 81,
+  "ungrounded_rate_among_captured_returned_items": 0.25391849529780564,
+  "classification_differences_on_same_name_and_evidence": 48,
+  "all_available_replays_match_live_records": true,
+  "no_policy_difference_in_available_replays": true,
+  "all_available_accepted_classifications_match_pre_cleanup": true
+}

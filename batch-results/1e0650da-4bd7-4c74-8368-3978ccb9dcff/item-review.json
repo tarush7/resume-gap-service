@@ -2,6 +2,7 @@
   {
     "job_id": "250d4712-ae4c-4536-8a9a-f119cb0c5247",
     "job_title": "Technology Product Manager AI & Data Strategy",
+    "raw_output_available": true,
     "accepted_classifications_preserved_from_pre_cleanup": true,
     "same_name_and_evidence_matches": 68,
     "category_changes": [
@@ -285,13 +286,12 @@
     "recovered_items": 24,
     "raw_passes": {
       "Full job requirement extraction": 106
-    },
-    "ungrounded_case_only_matches": [],
-    "ungrounded_case_and_whitespace_matches": []
+    }
   },
   {
     "job_id": "3c99f3df-e8c4-43b2-90a1-acae5fdb1f0d",
     "job_title": "Staff Technical Program Manager",
+    "raw_output_available": true,
     "accepted_classifications_preserved_from_pre_cleanup": true,
     "same_name_and_evidence_matches": 42,
     "category_changes": [
@@ -347,13 +347,12 @@
     "recovered_items": 4,
     "raw_passes": {
       "Full job requirement extraction": 85
-    },
-    "ungrounded_case_only_matches": [],
-    "ungrounded_case_and_whitespace_matches": []
+    }
   },
   {
     "job_id": "682c86cd-4d30-45c0-8ee4-9c5c3479573e",
     "job_title": "Principal Product Manager – Agentic AI Platform",
+    "raw_output_available": true,
     "accepted_classifications_preserved_from_pre_cleanup": true,
     "same_name_and_evidence_matches": 36,
     "category_changes": [
@@ -613,8 +612,28 @@
     "recovered_items": 3,
     "raw_passes": {
       "Full job requirement extraction": 36
-    },
-    "ungrounded_case_only_matches": [],
-    "ungrounded_case_and_whitespace_matches": []
+    }
+  },
+  {
+    "job_id": "a6dad872-d2c9-406f-9b3f-ce9c07664aec",
+    "job_title": "Solution Category Owner – Consultation Solutions",
+    "raw_output_available": true,
+    "accepted_classifications_preserved_from_pre_cleanup": true,
+    "same_name_and_evidence_matches": 0,
+    "category_changes": [],
+    "recovered_items": 25,
+    "raw_passes": {
+      "Full job requirement extraction": 92
+    }
+  },
+  {
+    "job_id": "fc8c0eac-bcec-4ded-8d28-2acc79dffbb1",
+    "job_title": "Engineering & Delivery Lead - Data Services",
+    "raw_output_available": false,
+    "accepted_classifications_preserved_from_pre_cleanup": null,
+    "same_name_and_evidence_matches": 0,
+    "category_changes": [],
+    "recovered_items": null,
+    "raw_passes": {}
   }
 ]

@@ -1,12 +1,12 @@
 {
-  "complete": false,
+  "complete": true,
   "batch_id": "1e0650da-4bd7-4c74-8368-3978ccb9dcff",
   "checks": {
-    "all_five_job_ids_present": false,
-    "one_attempt_per_job": false,
+    "all_five_job_ids_present": true,
+    "one_attempt_per_job": true,
     "production_requirement_count_unchanged": true,
     "baseline_audit_fields_unchanged": true,
-    "production_saving_disabled": false,
+    "production_saving_disabled": true,
     "jd_hashes_match_preflight": true
   },
   "counts_after": {
@@ -22,7 +22,7 @@
     },
     "job_requirement_extraction_audits_aggregate": {
       "aggregate": {
-        "count": 243
+        "count": 244
       }
     }
   },
@@ -108,9 +108,33 @@
       "job_title": "Solution Category Owner – Consultation Solutions",
       "company": "ZEISS Group",
       "before_status": "failed",
-      "after_status": "running",
+      "after_status": "succeeded",
       "before_accepted": null,
-      "after_accepted": null,
+      "after_accepted": 92,
+      "before_rejected": 0,
+      "after_rejected": 0,
+      "raw_items": 92,
+      "filtered": 0,
+      "merged_duplicates": 0,
+      "ungrounded_items": 0,
+      "structural_rejections": 0,
+      "failure_stage": null,
+      "failure_kind": null,
+      "duration_ms": 284864,
+      "requirements_saved": 0,
+      "review_events": 0,
+      "warning_types": {},
+      "category_level_conflicts": 0,
+      "error_message": null
+    },
+    {
+      "job_id": "fc8c0eac-bcec-4ded-8d28-2acc79dffbb1",
+      "job_title": "Engineering & Delivery Lead - Data Services",
+      "company": "Citi",
+      "before_status": "failed",
+      "after_status": "failed",
+      "before_accepted": null,
+      "after_accepted": 0,
       "before_rejected": 0,
       "after_rejected": 0,
       "raw_items": null,
@@ -118,14 +142,14 @@
       "merged_duplicates": null,
       "ungrounded_items": null,
       "structural_rejections": null,
-      "failure_stage": null,
-      "failure_kind": null,
-      "duration_ms": null,
-      "requirements_saved": null,
+      "failure_stage": "extraction",
+      "failure_kind": "parsing",
+      "duration_ms": 182713,
+      "requirements_saved": 0,
       "review_events": 0,
       "warning_types": {},
       "category_level_conflicts": 0,
-      "error_message": null
+      "error_message": "LangExtract inference failed during full job requirement extraction: Failed to parse JSON content: Unterminated string starting at: line 532 column 26 (char 16403)"
     }
   ]
 }

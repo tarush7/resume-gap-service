@@ -166,7 +166,7 @@ Keep, narrow, or remove the section-based filter after reviewing its behavior on
 
 ## Batch testing verification — required before promoting results
 
-**Status:** Planned — not run  
+**Status:** Five-job diagnostic preview completed; full 113-job comparison pending
 **Recorded:** 12 October 2026  
 **Purpose:** Confirm that cleanup fixes preserve source meaning and measure extraction issues separately from database-saving failures.
 
@@ -223,15 +223,40 @@ Add the next confirmed bug as **CHG-006**, including its code location, example,
 - Batch audits now retain raw LangExtract items, pre-cleanup records, recoveries,
   filtering and merge events, frozen JD/hash, code/configuration metadata, stage
   counts, and separate extraction/save outcomes. Retries append new attempts.
-- Apply migrations 002 and 003 before using the updated runner. Neither migration
-  nor actual-JD batches have been run by this implementation work.
+- Required audit schema changes were applied by the user before the five-job
+  preview; the updated runner successfully wrote and retrieved the new audit fields.
 - Local replay and a frozen-cohort workflow are documented in
   `BATCH_EXTRACTION_GUIDE.md`. Raw provider responses and model weights/digests
   are not captured; unavailable pre-cleanup output requires a fresh extraction.
-- Representative manual review, coverage checklists, five-JD and 113-job previews,
-  filter-policy decision, and production promotion remain pending.
+- The five-job diagnostic preview is complete. Representative manual review,
+  coverage checklists, the full 113-job preview, filter-policy decision and
+  production promotion remain pending.
 
 Validation: 33 local tests passed, including mocked FastAPI preview, offline replay,
 filter accounting and append-only retry checks. Ruff lint/format and whitespace
 checks passed. The tests mock external services and do not constitute actual-JD
 batch verification.
+
+## Five-job diagnostic preview — 20 October 2026
+
+Batch `1e0650da-4bd7-4c74-8368-3978ccb9dcff` used `save_requirements=false`
+and the same five selected baseline job IDs. Two clean successes, two successes
+with warnings, one parsing failure; five attempts, zero retries. Production
+requirements stayed at 125 rows; audits increased from 239 to 244. The captured
+fields of all 113 baseline audits remain unchanged.
+
+Across four parseable jobs: 319 raw items, 238 accepted, 81 grounding rejections,
+zero filtered, zero merged duplicates. The fifth job has no returned-item
+denominator because inference output could not be parsed. All accepted category
+and level values match captured pre-cleanup output. Four offline replays match
+live accepted output. Of 146 records matching older output on name/evidence,
+48 classifications differ, consistent with removal of the section override.
+Targeted JD review confirms SQL/Python preferences and an experience requirement
+are preserved for Citi AI/Data; this does not establish full cohort accuracy.
+
+ZEISS succeeded after its previous timeout. Citi Engineering & Delivery Lead
+still fails with the same unterminated-JSON error. No filter-policy events were
+observed, so actual-JD boilerplate policy verification remains pending.
+
+Evidence: `batch-results/1e0650da-4bd7-4c74-8368-3978ccb9dcff/comparison.md`,
+`after.json`, `item-review.json`, `replay-comparison.json`, and `run.log`.
